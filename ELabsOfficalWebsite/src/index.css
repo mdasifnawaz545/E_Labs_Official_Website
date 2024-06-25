@@ -10,4 +10,21 @@
     width: 100%;
     min-height: 100vh;
   }
+  body{
+    background-image: url(https://res.cloudinary.com/dpqdgcipi/image/upload/v1719326874/Blurred_Dark_Orange_Background_fpnyir.jpg);
+    background-size: cover;
+  }
+
+  /*--Animated_Background--*/
+
+  .image-container {
+    background: rgb(252, 168, 75);
+    background: linear-gradient(
+      90deg,
+      rgba(252, 168, 75, 1) 10%,
+      rgba(255, 231, 208, 1) 100%
+    );
+  }
+
+
 }
