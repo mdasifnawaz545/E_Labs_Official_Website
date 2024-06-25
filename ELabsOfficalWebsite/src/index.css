@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base{
   html,body{
+    font-family: "Varela Round", sans-serif;
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -13,18 +15,12 @@
   body{
     background-image: url(https://res.cloudinary.com/dpqdgcipi/image/upload/v1719326874/Blurred_Dark_Orange_Background_fpnyir.jpg);
     background-size: cover;
+    /* background-color: black; 
+    filter: blur(3); */
   }
 
   /*--Animated_Background--*/
 
-  .image-container {
-    background: rgb(252, 168, 75);
-    background: linear-gradient(
-      90deg,
-      rgba(252, 168, 75, 1) 10%,
-      rgba(255, 231, 208, 1) 100%
-    );
-  }
 
 
 }

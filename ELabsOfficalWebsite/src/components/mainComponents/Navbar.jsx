@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 function Navbar() {
   return (
     <div className='p-2 w-full fixed'>
-      <div className='w-full mt-1 p-2 h-16 flex items-center justify-evenly border-2 rounded-md border-textColor1'>
+      <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
         <nav className='w-full list-none flex items-center justify-between'>
-          <div className='flex items-center justify-between'>
-            <li>
+          <div className='flex items-center justify-between border-2 border-textColor1 py-1 px-[1px] rounded-lg'>
+            <li className=''>
               <figure className='flex items-center justify-center'>
                 <img
                   src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
