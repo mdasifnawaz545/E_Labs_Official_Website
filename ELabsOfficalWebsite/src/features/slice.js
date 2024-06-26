@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     eventDetails: [{ name: "", venue: "", date: "", shortDescription: "", Description: "" }],
-    memberDetails: [{ name: "Md Asif Nawaz", position: "Asst.Lead Coordinator" }]
+    memberDetails: [{ name: "Md Asif Nawaz", position: "Asst.Lead Coordinator" }],
+    theme:"dark"
 }
 
 const slice = createSlice({
@@ -20,6 +21,9 @@ const slice = createSlice({
         },
         editMember: (state, action) => {
 
+        },
+        changeTheme:(state,action)=>{
+                state.theme=action.payload
         }
     }
 });
