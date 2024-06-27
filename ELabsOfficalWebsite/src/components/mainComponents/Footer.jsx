@@ -10,13 +10,15 @@ function Footer() {
         <img 
         src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" alt=""
         width={256}
-        className='scale-90'
+        className='scale-75'
          />
       </figure>
-      <FooterCard heading={`Address`} array={[`KIIT UNIVERSITY, Campus 12`,`Old Electronics Building,`,`Patia, Bhubaneswar, Odisha`,`India 751024`,``,``,``,``]}/>
-      <ContactUs/>
       <Social/>
+      <ContactUs/>
+      <FooterCard heading={`Address`} array={[`KIIT UNIVERSITY, Campus 12`,`Old Electronics Building,`,`Patia, Bhubaneswar, Odisha`,`India 751024`,``,``,``,``]}/>
+      
       <FooterCard heading={`Contact Us`}  array={[`Kalinga Institute of Industrial`,` Technology (KIIT), `,``,`India 751024`,``,``,``,``]}/>
+      
     </div>
   )
 }
