@@ -11,11 +11,14 @@
     overflow: auto;
     width: 100%;
     min-height: 100vh;
+    scroll-behavior: smooth;
   }
   body{
+    
     background-image: url(https://res.cloudinary.com/dpqdgcipi/image/upload/v1719326874/Blurred_Dark_Orange_Background_fpnyir.jpg);
     backdrop-filter: blur(100px);
-    background-size: cover;
+    background-size: contain;
+    @apply dark:bg-blue-50
     /* background-color: black; 
     filter: blur(3); */
   }

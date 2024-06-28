@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   return (
-    <div className='p-2 w-full fixed z-10 dark:bg-blue-500'>
+    <div className='p-2 w-full fixed z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
       <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
         <nav className='w-full list-none flex items-center justify-between'>
           <div className='flex items-center justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
@@ -88,13 +88,14 @@ function Navbar() {
             <li>
               <ImageButton imageSource={themeImage} func={changeTheme}/>
             </li>
+            <div className='flex gap-2'>
             <li>
               <Button buttonName='SIGN UP' userClass=''/>
             </li>
             <li>
               <Button buttonName='LOG IN'/>
             </li>
-
+            </div>
           </div>
 
         </nav>

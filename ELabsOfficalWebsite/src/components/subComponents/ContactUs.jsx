@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactUs() {
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4 min-w-48'>
         <h1 className=' font-extrabold text-xl text-textColor1'>Contact Us</h1>
         <div className='flex flex-col gap-1'>
             <div className='flex flex-col text-textColor2 text-sm'>
