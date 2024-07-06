@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import About from './About'
 import FirstPage from './FirstPage'
 import Events from './Events'
+import Member from './Member'
 
 function Home() {
 
@@ -16,6 +17,9 @@ function Home() {
       </section>
       <section id='eventPage'>
         <Events/>
+      </section>
+      <section id='membersPage'>
+        <Member/>
       </section>
     </div>
   )

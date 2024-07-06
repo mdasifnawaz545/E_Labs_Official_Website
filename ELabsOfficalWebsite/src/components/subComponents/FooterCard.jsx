@@ -6,7 +6,7 @@ function FooterCard({heading="Heading",array=[],icon1}) {
         <h1 className=' font-extrabold text-xl text-textColor1'>{heading}</h1>
         <div>
         {array.map((el)=>{
-                return <p className='text-sm text-textColor2'>{icon1}{el}</p>
+                return <pre><a href={el.url} className=' text-sm text-textColor2 hover:text-textColor1'>{icon1}{el.desc}</a></pre>
         })}
         </div>
     </div>

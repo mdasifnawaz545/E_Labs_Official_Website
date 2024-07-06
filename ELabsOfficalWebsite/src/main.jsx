@@ -9,7 +9,7 @@ import Layout from './components/Layouts/Layout.jsx'
 import Home from './components/mainComponents/Home.jsx'
 import Events from './components/mainComponents/Events.jsx'
 import About from './components/mainComponents/About.jsx'
-import Members from './components/mainComponents/Members.jsx'
+import Member from './components/mainComponents/Member.jsx'
 import Feedback from './components/mainComponents/Feedback.jsx'
 import Signup from './components/mainComponents/Signup.jsx'
 import Login from './components/mainComponents/Login.jsx'
@@ -19,9 +19,9 @@ const route = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />}></Route>
       <Route path="about" element={<About />}></Route>
-      <Route path="/#aboutPage" element={<About />}></Route>
+      {/* <Route path="/#aboutPage" element={<About />}></Route> */}
       <Route path="events" element={<Events />}></Route>
-      <Route path="members" element={<Members />}></Route>
+      <Route path="members" element={<Member />}></Route>
       <Route path="feedback" element={<Feedback />}></Route>
       <Route path="signup" element={<Signup />}></Route>
       <Route path="login" element={<Login />}></Route>

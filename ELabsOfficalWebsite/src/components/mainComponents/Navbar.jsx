@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Button from '../subComponents/Button'
 import ImageButton from '../subComponents/ImageButton'
 import { useSelector } from 'react-redux';
@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   return (
-    <div className='p-2 w-full fixed z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
+    <div className='p-2 w-full  fixed z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
       <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
         <nav className='w-full list-none flex items-center justify-between'>
           <div className='flex items-center justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
@@ -31,7 +31,7 @@ function Navbar() {
             </li>
           </div>
 
-          <div className='hidden sm:visible md:visible lg:visible xl:visible 2xl:visible text-textColor2 flex  gap-16'>
+          <div className='max-[900px]:hidden sm:visible md:visible lg:visible xl:visible 2xl:visible text-textColor2 flex  gap-16'>
             <li
 
 
@@ -88,12 +88,16 @@ function Navbar() {
             <li>
               <ImageButton imageSource={themeImage} func={changeTheme}/>
             </li>
-            <div className='flex gap-2'>
+            <div className='flex gap-2 max-[467px]:hidden'>
             <li>
+              <Link to={'/signup'}>
               <Button buttonName='SIGN UP' userClass=''/>
+              </Link>
             </li>
             <li>
+              <Link to={'/login'}>
               <Button buttonName='LOG IN'/>
+              </Link>
             </li>
             </div>
           </div>

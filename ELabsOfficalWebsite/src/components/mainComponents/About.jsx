@@ -10,7 +10,7 @@ function About() {
   return (
     
         
-      <div className='flex flex-wrap items-center justify-evenly pt-4 min-h-screen gap-8'>
+      <div className='flex flex-wrap items-center justify-evenly mt-4 min-h-screen gap-8'>
           <Card userClass="hover:scale-105 duration-300"/>
           <HPCard heading='E - Labs'  userClass='text-6xl font-black' description={desc}/>
         </div>

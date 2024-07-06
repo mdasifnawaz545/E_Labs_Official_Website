@@ -14,12 +14,15 @@ function Footer() {
         />
       </figure>
       <div className='flex flex-wrap items-center justify-evenly gap-4'>
-      <Social />
-      <ContactUs />
-      <FooterCard heading={`Address`} array={[`KIIT UNIVERSITY, Campus 12`, `Old Electronics Building,`, `Patia, Bhubaneswar, Odisha`, `India 751024`, ``, ``, ``, ``]} />
-      <FooterCard heading={`Contact Us`} array={[`Kalinga Institute of Industrial`, ` Technology (KIIT), `, ``, `India 751024`, ``, ``, ``, ``]} />
+        <Social />
+        <ContactUs />
+        <FooterCard heading={`Address`} array={[{desc:`KIIT UNIVERSITY, Campus 12 
+Old Electronics Building,
+Patia, Bhubaneswar,
+Odisha India 751024`, url:``}]} />
+        <FooterCard heading={`Contact Us`} array={[`Kalinga Institute of Industrial`, ` Technology (KIIT), `, ``, `India 751024`, ``, ``, ``, ``]} />
 
-    </div>
+      </div>
     </div>
   )
 }

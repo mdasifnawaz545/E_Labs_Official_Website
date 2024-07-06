@@ -1,11 +1,12 @@
 import React from 'react'
 import IconButton from '../subComponents/IconButton'
 import EventCard from '../subComponents/EventCard'
+import Member from './Member'
 
 function FirstPage() {
   return (
-    <div className='flex flex-col items-center justify-start mt-[20px] min-h-screen flex-grow px-6'>
-    <div className='flex  scale-90 flex-col items-center justify-center p-8 gap-6'>
+    <div className='flex flex-col items-center justify-start flex-grow '>
+    <div className='flex  scale-90 flex-col items-center justify-center mt-12 gap-6'>
       <figure>
         <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />
       </figure>
@@ -20,7 +21,7 @@ function FirstPage() {
       </p>
       <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/arrows.png" />
       {/* Testing Components */}
-
+        
     </div>
   </div>
   )
