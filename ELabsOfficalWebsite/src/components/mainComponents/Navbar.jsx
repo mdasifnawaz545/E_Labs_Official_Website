@@ -8,6 +8,8 @@ function Navbar() {
   let [darkTheme,setDarkTheme]=useState(true);
   let {theme}=useSelector(state=>state.theme);
 
+  let hamberger='https://res.cloudinary.com/dpqdgcipi/image/upload/v1720320235/menu_s65s86.png'
+
   let themeImage=(document.querySelector('html').classList.contains('dark'))?"https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Day_v8jqbm.png":"https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Night_kwwujc.png"
 
   function changeTheme(){
@@ -15,9 +17,9 @@ function Navbar() {
   }
 
   return (
-    <div className='p-2 w-full  fixed z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
+    <div className='p-2 w-full z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
       <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
-        <nav className='w-full list-none flex items-center justify-between'>
+        <nav className='w-full list-none flex items-center  justify-between'>
           <div className='flex items-center justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
             <li className=''>
               <figure className='flex items-center justify-center'>
@@ -88,6 +90,7 @@ function Navbar() {
             <li>
               <ImageButton imageSource={themeImage} func={changeTheme}/>
             </li>
+   
             <div className='flex gap-2 max-[467px]:hidden'>
             <li>
               <Link to={'/signup'}>
@@ -99,7 +102,11 @@ function Navbar() {
               <Button buttonName='LOG IN'/>
               </Link>
             </li>
+           
             </div>
+            <li>
+              <ImageButton userClass={"min-[850px]:hidden"} imageSource={hamberger} />
+            </li>
           </div>
 
         </nav>
