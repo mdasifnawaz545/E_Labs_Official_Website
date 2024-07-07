@@ -19,7 +19,7 @@ function FirstPage() {
       <p className='text-textColor2 max-w-96 text-center'>
         Join us as we foster a community-driven approach to knowledge, making a tangible impact through shared learning experiences.
       </p>
-      <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/arrows.png" />
+      <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/next.png" />
       {/* Testing Components */}
         
     </div>
