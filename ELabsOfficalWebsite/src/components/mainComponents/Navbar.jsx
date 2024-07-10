@@ -23,11 +23,14 @@ function Navbar() {
           <div className='flex items-center justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
             <li className=''>
               <figure className='flex items-center justify-center'>
-                <img
-                  src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
-                  width={54}
-                  alt="LOGO"
-                />
+                <a href="/">
+                    <img
+                    src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
+                    width={54}
+                    alt="LOGO"
+                    />
+                </a>
+                
                 {/* <figcaption className='font-bold text-xl text-textColor1'>E Labs</figcaption> */}
               </figure>
             </li>
@@ -96,11 +99,13 @@ function Navbar() {
               <Link to={'/signup'}>
               <Button buttonName='SIGN UP' userClass=''/>
               </Link>
+              {/* <Button buttonName="SIGN UP" userClass="" href='/signup'/> */}
             </li>
             <li>
               <Link to={'/login'}>
               <Button buttonName='LOG IN'/>
               </Link>
+              {/* <Button buttonName='LOG IN' userClass='' href='/login'/> */}
             </li>
            
             </div>
