@@ -2,40 +2,48 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { projects } from "../../constants/Projects";
-import {
-  Avatar,
-  Image,
-  ScrollShadow,
-  Modal,
-  ModalContent,
-  ModalBody,
-  useDisclosure,
-} from "@nextui-org/react";
+import { Avatar, Image, ScrollShadow, Tooltip } from "@nextui-org/react";
 
 const Project = ({ project = projects[0] }) => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
   return (
     <div className="container mx-auto px-5 dark">
-      <div className="mt-10 mb-20 rounded-xl border-textColor1 border-2 p-5 flex flex-col gap-10 overflow-x-hidden">
+      <div className="mt-10 mb-20 rounded-xl border-textColor1 border-2 p-5 flex flex-col gap-6 lg:gap-10 overflow-x-hidden">
         <div className="flex lg:flex-row items-center justify-evenly gap-14 lg:gap-10 flex-col mt-6">
           <div className="w-full lg:w-[30%] flex items-center justify-center flex-col">
             <div className="flex w-full items-center justify-center">
               <Image
-                className="aspect-square w-[100%] min-w-[150px] max-w-[200px] object-cover hover:shadow-lg transition-all ease-in-out duration-200 hover:scale-95"
+                className="aspect-square w-[100%] min-w-[150px] max-w-[200px] object-cover hover:shadow-lg transition-all ease-in-out duration-200 hover:scale-95 hover:shadow-textColor1"
                 src={project.logo}
                 alt="project_logo"
                 isBlurred
                 radius="lg"
               />
             </div>
-            <div className="flex flex-wrap justify-center items-center mt-4 w-full gap-8">
-              <a href={project.github} target="_blank">
-                <FaGithub className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
-              </a>
-              <a href={project.url} target="_blank">
-                <FiExternalLink className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
-              </a>
+            <div className="flex flex-wrap justify-center items-center mt-4 w-full gap-8 light">
+              <Tooltip
+                placement="left"
+                content="GitHub"
+                showArrow={true}
+                shadow="lg"
+                radius="sm"
+                closeDelay={0}
+              >
+                <a href={project.github} target="_blank">
+                  <FaGithub className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
+                </a>
+              </Tooltip>
+              <Tooltip
+                placement="right"
+                content="Website"
+                showArrow={true}
+                shadow="lg"
+                radius="sm"
+                closeDelay={0}
+              >
+                <a href={project.url} target="_blank">
+                  <FiExternalLink className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
+                </a>
+              </Tooltip>
             </div>
             <div className="flex p-3 flex-row flex-wrap justify-evenly items-center rounded-xl border-2 border-textColor1 mt-5 w-fit gap-4">
               <div className="flex items-center justify-center w-[50%] max-w-[75px]">
@@ -69,59 +77,28 @@ const Project = ({ project = projects[0] }) => {
               </h1>
             </div>
             <div className="flex items-center justify-start w-full">
-              <p className="tracking-tight w-full text-textColor2">
+              <p className="tracking-tight w-full text-textColor2 text-balance">
                 {project.description}
               </p>
             </div>
           </div>
         </div>
-        <div className="px-[5%] w-full overflow-visible">
+        <div className="flex px-[2%] lg:px-[5%] w-full overflow-x-visible">
           <ScrollShadow
-            className="flex flex-row items-center w-full justify-start snap-x overflow-x-auto mb-6 gap-8 py-5 select-none"
+            className="flex items-center w-full justify-evenly snap-x mb-6 gap-8 py-5 select-none"
             orientation="horizontal"
             size={25}
           >
             {project.screenshots.map((item, index) => (
-              <>
-                <img
+              <div className="shrink-0">
+                <Image
                   src={item}
                   alt={`project_screenshot_${index}`}
                   key={index}
-                  className="max-h-[175px] hover:shadow-lg hover:shadow-textColor1 hover:scale-95 snap-center transition-all ease-in-out duration-200 object-cover rounded-xl cursor-pointer border-2 border-textColor1"
-                  onClick={onOpen}
+                  radius="lg"
+                  className="flex shrink-0 max-h-[175px] max-w-[800px] hover:shadow-lg hover:shadow-textColor1 hover:scale-95 snap-center transition-all ease-in-out duration-200 object-cover border-2 border-textColor1"
                 />
-                <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-                  <ModalContent>
-                    {(onClose) => (
-                      <>
-                        <ModalBody>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nullam pulvinar risus non risus hendrerit
-                            venenatis. Pellentesque sit amet hendrerit risus,
-                            sed porttitor quam.
-                          </p>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nullam pulvinar risus non risus hendrerit
-                            venenatis. Pellentesque sit amet hendrerit risus,
-                            sed porttitor quam.
-                          </p>
-                          <p>
-                            Magna exercitation reprehenderit magna aute tempor
-                            cupidatat consequat elit dolor adipisicing. Mollit
-                            dolor eiusmod sunt ex incididunt cillum quis. Velit
-                            duis sit officia eiusmod Lorem aliqua enim laboris
-                            do dolor eiusmod. Et mollit incididunt nisi
-                            consectetur esse laborum eiusmod pariatur proident
-                            Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
-                          </p>
-                        </ModalBody>
-                      </>
-                    )}
-                  </ModalContent>
-                </Modal>
-              </>
+              </div>
             ))}
           </ScrollShadow>
         </div>

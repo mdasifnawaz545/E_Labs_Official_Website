@@ -20,13 +20,13 @@ export const projects = [
       </>
     ),
     screenshots: [
+      "https://placehold.co/300x400",
+      "https://placehold.co/800x400",
       "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/200x400",
     ],
-    logo: "https://placehold.co/600x400",
+    logo: "https://placehold.co/600",
     github: "https://github.com",
     url: "https://example.com",
     author: {
