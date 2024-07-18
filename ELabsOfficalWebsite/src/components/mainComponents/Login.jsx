@@ -30,7 +30,7 @@ function Login() {
     };
 
     return (
-        <div className="flex flex-wrap items-center justify-evenly min-h-screen gap-8 dark:bg-blue-100 dark:bg-lightBG">
+        <div className="flex scale-75 flex-wrap items-center justify-evenly min-h-screen gap-8 dark:bg-blue-100 dark:bg-lightBG">
             <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mt-8 mb-16 border-textColor1 border-[5px] rounded-3xl overflow-auto">
                 <div className="flex flex-col sm:w-1/2 justify-start p-8 text-textColor1">
                     <h1 className="md:text-3xl text-xl font-medium mb-8">LOG IN</h1>

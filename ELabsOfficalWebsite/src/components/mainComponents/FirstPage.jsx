@@ -2,11 +2,13 @@ import React from 'react'
 import IconButton from '../subComponents/IconButton'
 import EventCard from '../subComponents/EventCard'
 import Member from './Member'
+import Signup from '../mainComponents/Signup'
+import EventPage from '../mainComponents/EventPage'
 
 function FirstPage() {
   return (
     <div className='flex flex-col items-center justify-start flex-grow '>
-    <div className='flex  scale-90 flex-col items-center justify-center mt-12 gap-6'>
+    <div className='flex scale-95 flex-col items-center justify-center  gap-6'>
       <figure>
         <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />
       </figure>
@@ -17,7 +19,7 @@ function FirstPage() {
         </h2>
       </div>
       <p className='text-textColor2 max-w-96 text-center'>
-        Join us as we foster a community-driven approach to knowledge, making a tangible impact through shared learning experiences.
+        Join us as we foster a community-driven approach to knowledge.
       </p>
       <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/next.png" />
       {/* Testing Components */}

@@ -23,6 +23,7 @@
     filter: blur(3); */;
   }
 
+
   ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -39,6 +40,16 @@
   }
 
   /*--Animated_Background--Outsource code*/
+
+
+.firstPage{
+  background-image: url('https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png');
+  background-size: contain;
+ 
+}
+
+  /*--Animated_Background--Outsource code*/ 
+
 
   /* 
   
@@ -113,11 +124,11 @@ head::after {
   }
 }
 
-  
-  */
-}
-
-input::-ms-reveal {
+  input::-ms-reveal {
   filter: invert(57%) sepia(60%) saturate(2884%) hue-rotate(334deg)
     brightness(95%) contrast(101%);
 }
+
+}
+
+
