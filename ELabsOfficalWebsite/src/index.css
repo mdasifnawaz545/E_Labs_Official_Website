@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
+@layer base{
+  html,body{
     font-family: "Varela Round", sans-serif;
     margin: 0;
     padding: 0;
@@ -14,32 +13,15 @@
     min-height: 100vh;
     scroll-behavior: smooth;
   }
-  body {
-    background-image: url("https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png");
+  body{
+    
+    background-image: url('https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png');
     backdrop-filter: blur(100px);
     background-size: contain;
     @apply dark:bg-blue-50
     /* background-color: black; 
-    filter: blur(3); */;
+    filter: blur(3); */
   }
-
-
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #935913;
-    border-radius: 50px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #f7941d;
-    border-radius: 50px;
-  }
-
-  /*--Animated_Background--Outsource code*/
 
 
 .firstPage{
@@ -49,7 +31,6 @@
 }
 
   /*--Animated_Background--Outsource code*/ 
-
 
   /* 
   
@@ -124,11 +105,13 @@ head::after {
   }
 }
 
-  input::-ms-reveal {
-  filter: invert(57%) sepia(60%) saturate(2884%) hue-rotate(334deg)
-    brightness(95%) contrast(101%);
-}
+  
+*/
+
+
 
 }
 
-
+input::-ms-reveal {
+    filter: invert(57%) sepia(60%) saturate(2884%) hue-rotate(334deg) brightness(95%) contrast(101%);
+}

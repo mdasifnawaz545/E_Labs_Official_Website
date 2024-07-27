@@ -1,18 +1,14 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "../mainComponents/Navbar";
-import Footer from "../mainComponents/Footer";
-import { NextUIProvider } from "@nextui-org/react";
-
+import {Outlet} from 'react-router-dom'
+import Navbar from '../mainComponents/Navbar';
+import Footer from '../mainComponents/Footer';
 function Layout() {
-  return (
-    <NextUIProvider>
-      <div className="flex flex-col">
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </div>
-    </NextUIProvider>
-  );
+    return (
+        <div className='flex flex-col'>
+            <Navbar/>
+            <Outlet />
+            <Footer/>
+        </div>
+    )
 }
 
 export default Layout;
