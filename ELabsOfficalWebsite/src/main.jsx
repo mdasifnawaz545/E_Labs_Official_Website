@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -38,13 +37,12 @@ const route = createBrowserRouter(
       <Route path="gallery" element={<Gallery />}></Route>
     </Route>
   )
-)
+);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={route} />
-    </Provider >
+    </Provider>
   </React.StrictMode>
-
-)
+);
