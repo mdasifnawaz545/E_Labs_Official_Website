@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { projects } from "../../constants/Projects";
-import { Avatar, Image, ScrollShadow, Tooltip } from "@nextui-org/react";
+import { Avatar, Image, ScrollShadow } from "@nextui-org/react";
 
 const Project = ({ project = projects[0] }) => {
   return (
@@ -20,30 +20,12 @@ const Project = ({ project = projects[0] }) => {
               />
             </div>
             <div className="flex flex-wrap justify-center items-center mt-4 w-full gap-8 light">
-              <Tooltip
-                placement="left"
-                content="GitHub"
-                showArrow={true}
-                shadow="lg"
-                radius="sm"
-                closeDelay={0}
-              >
-                <a href={project.github} target="_blank">
-                  <FaGithub className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
-                </a>
-              </Tooltip>
-              <Tooltip
-                placement="right"
-                content="Website"
-                showArrow={true}
-                shadow="lg"
-                radius="sm"
-                closeDelay={0}
-              >
-                <a href={project.url} target="_blank">
-                  <FiExternalLink className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
-                </a>
-              </Tooltip>
+              <a href={project.github} target="_blank">
+                <FaGithub className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
+              </a>
+              <a href={project.url} target="_blank">
+                <FiExternalLink className="text-4xl text-textColor1 hover:text-textColor2 transition-all ease-in-out duration-200 hover:scale-105" />
+              </a>
             </div>
             <div className="flex p-3 flex-row flex-wrap justify-evenly items-center rounded-xl border-2 border-textColor1 mt-5 w-fit gap-4">
               <div className="flex items-center justify-center w-[50%] max-w-[75px]">
