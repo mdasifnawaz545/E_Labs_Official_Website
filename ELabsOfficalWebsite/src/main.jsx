@@ -19,8 +19,8 @@ import Member from "./components/mainComponents/Member.jsx";
 import Feedback from "./components/mainComponents/Feedback.jsx";
 import Signup from "./components/mainComponents/Signup.jsx";
 import Login from "./components/mainComponents/Login.jsx";
-import Project from "./components/mainComponents/Project.jsx";
-import Gallery from "./components/mainComponents/gallery.jsx";
+// import Project from "./components/mainComponents/Project.jsx";
+// import Gallery from "./components/mainComponents/gallery.jsx";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -34,8 +34,8 @@ const route = createBrowserRouter(
       <Route path="signup" element={<Signup />}></Route>
       <Route path="login" element={<Login />}></Route>
 
-      <Route path="project" element={<Project />}></Route>
-      <Route path="gallery" element={<Gallery />}></Route>
+      {/* <Route path="project" element={<Project />}></Route> */}
+      {/* <Route path="gallery" element={<Gallery />}></Route> */}
     </Route>
   )
 )

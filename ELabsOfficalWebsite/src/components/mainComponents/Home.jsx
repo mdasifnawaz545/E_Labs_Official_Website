@@ -5,6 +5,7 @@ import FirstPage from './FirstPage'
 import Events from './Events'
 import Member from './Member'
 import Feedback from './Feedback'
+import Gallery from './Gallery'
 
 function Home() {
 
@@ -21,6 +22,9 @@ function Home() {
       </section>
       <section id='membersPage'>
         <Member/>
+      </section>
+      <section id='galleryPage'>
+        <Gallery/>
       </section>
       <section id='feedbackPage'>
         <Feedback/>
