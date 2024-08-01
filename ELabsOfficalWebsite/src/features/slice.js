@@ -209,6 +209,7 @@ const initialState = {
       eventName: "Event 12",
     },
   ],
+
 };
 
 const slice = createSlice({

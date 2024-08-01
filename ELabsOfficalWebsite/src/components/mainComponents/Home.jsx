@@ -6,12 +6,13 @@ import Events from './Events'
 import Member from './Member'
 import Feedback from './Feedback'
 import Gallery from './Gallery'
+import Members from './Members'
 
 function Home() {
 
   return (
     <div className='body dark:bg-blue-100 dark:backdrop-blur-lg'>
-      <section id='home'>
+      <section id='home' className='min-h-screen flex flex-col justify-center items-center'>
         <FirstPage />
       </section>
       <section id='aboutPage'>
@@ -21,14 +22,14 @@ function Home() {
         <Events/>
       </section>
       <section id='membersPage'>
-        <Member/>
+        <Members/>
       </section>
       <section id='galleryPage'>
         <Gallery/>
       </section>
-      <section id='feedbackPage'>
+      {/* <section id='feedbackPage'>
         <Feedback/>
-      </section>
+      </section> */}
       <br />
     </div>
   )

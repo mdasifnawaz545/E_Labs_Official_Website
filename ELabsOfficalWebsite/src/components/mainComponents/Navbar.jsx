@@ -12,6 +12,8 @@ function Navbar() {
   let bg = "";
   let hamberger = 'https://res.cloudinary.com/dpqdgcipi/image/upload/v1720320235/menu_s65s86.png'
 
+  
+  
 
   const handleHamberger = async () => {
     const navb=document.querySelector('.hamburger')
@@ -42,7 +44,7 @@ function Navbar() {
   return (
     <div className='p-2 w-full z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
       <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
-        <nav className={`w-full list-none flex items-center  justify-between`}>
+        <nav className={`w-full ${ham?"backdrop-blur-3xl":""} list-none flex items-center  justify-between`}>
           <div className='flex items-center  justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
             <li className=''>
               <figure className='flex items-center justify-center'>
@@ -74,9 +76,9 @@ function Navbar() {
 
 
             >
-              <NavLink to="/about" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+              <NavLink to="/quiz" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
 
-                About
+              Quiz
               </NavLink>
             </li>
 
@@ -84,9 +86,9 @@ function Navbar() {
 
 
             >
-              <NavLink to="/events" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+              <NavLink to="/project" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
 
-                Events
+              Projects
               </NavLink>
             </li>
 
@@ -94,18 +96,17 @@ function Navbar() {
 
 
             >
-              <NavLink to="/members" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+              <NavLink to="/courses" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
 
-                Members
+                Courses
               </NavLink>
             </li>
             <li
 
 
             >
-              <NavLink to="/feedback" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-
-                Feedback
+              <NavLink to="/recruitment" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+                Recruitment
               </NavLink>
             </li>
 
