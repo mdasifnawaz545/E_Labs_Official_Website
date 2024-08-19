@@ -84,7 +84,7 @@ function Login() {
                             href="#"
                         >
                             <img
-                                src={github}
+                                src=""
                                 alt="GitHub logo"
                                 className="w-12 mx-4"
                             />

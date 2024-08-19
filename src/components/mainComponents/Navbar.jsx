@@ -76,19 +76,9 @@ function Navbar() {
 
 
             >
-              <NavLink to="/quiz" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+              <NavLink to="/events" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
 
-              Quiz
-              </NavLink>
-            </li>
-
-            <li
-
-
-            >
-              <NavLink to="/project" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-
-              Projects
+              Events
               </NavLink>
             </li>
 
@@ -98,15 +88,25 @@ function Navbar() {
             >
               <NavLink to="/courses" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
 
-                Courses
+              Courses
+              </NavLink>
+            </li>
+
+            <li
+
+
+            >
+              <NavLink to="/projects" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+
+                Projects
               </NavLink>
             </li>
             <li
 
 
             >
-              <NavLink to="/recruitment" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-                Recruitment
+              <NavLink to="/gallery" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+                Gallery
               </NavLink>
             </li>
 
@@ -125,12 +125,11 @@ function Navbar() {
                 </Link>
                 {/* <Button buttonName="SIGN UP" userClass="" href='/signup'/> */}
               </li>
-              <li>
+              {/* <li>
                 <Link to={'/login'}>
                   <Button buttonName='LOG IN' />
                 </Link>
-                {/* <Button buttonName='LOG IN' userClass='' href='/login'/> */}
-              </li>
+              </li> */}
 
             </div>
             <li>

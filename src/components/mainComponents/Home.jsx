@@ -22,14 +22,14 @@ function Home() {
         <Events/>
       </section>
       <section id='membersPage'>
-        <Members/>
+        <Member/>
       </section>
       <section id='galleryPage'>
         <Gallery/>
       </section>
-      {/* <section id='feedbackPage'>
+      <section id='feedbackPage'>
         <Feedback/>
-      </section> */}
+      </section>
       <br />
     </div>
   )
