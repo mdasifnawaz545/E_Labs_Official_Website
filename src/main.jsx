@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -19,6 +18,9 @@ import Member from "./components/mainComponents/Member.jsx";
 import Feedback from "./components/mainComponents/Feedback.jsx";
 import Signup from "./components/mainComponents/Signup.jsx";
 import Login from "./components/mainComponents/Login.jsx";
+import StudyMt from "./components/mainComponents/StudyMt.jsx";
+import Materials from "./components/mainComponents/Materials.jsx";
+import PdfView from "./components/mainComponents/PdfView.jsx";
 // import Project from "./components/mainComponents/Project.jsx";
 // import Gallery from "./components/mainComponents/gallery.jsx";
 
@@ -35,18 +37,20 @@ const route = createBrowserRouter(
       <Route path="feedback" element={<Feedback />}></Route>
       <Route path="signup" element={<Signup />}></Route>
       <Route path="login" element={<Login />}></Route>
+      <Route path="courses" element={<StudyMt />}></Route>
+      <Route path="courses/:sec" element={<Materials />}></Route>
+      <Route path="courses/:sec/:pdf" element={<PdfView />}></Route>
 
       {/* <Route path="project" element={<Project />}></Route> */}
       {/* <Route path="gallery" element={<Gallery />}></Route> */}
     </Route>
   )
-)
+);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={route} />
-    </Provider >
+    </Provider>
   </React.StrictMode>
-
-)
+);
