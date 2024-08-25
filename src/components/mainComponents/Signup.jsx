@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import github from "../../../Images/github.png";
+import github from "../../../public/Images/github.png";
 
 function Signup() {
     const [username, setUsername] = useState("");
@@ -109,7 +109,7 @@ function Signup() {
                             aria-label="Confirm Password"
                             required
                         />
-                        <button className="bg-textColor1  text-black px-5 py-4 w-full rounded-[98px] border-2-textColor1 text-lg md:text-2xl font-medium hover-effect dark:hover:bg-textColor2 hover:bg-bgColor hover:text-textColor1">
+                        <button className="bg-textColor1  text-black px-5 py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium hover-effect dark:hover:bg-textColor2 hover:bg-bgColor hover:text-textColor1">
                             {loading ? "Signing up..." : "SIGN UP"}
                         </button>
                         <div className="h-6 md:h-4">
@@ -121,18 +121,18 @@ function Signup() {
                             <hr className="w-1/2 h-px bg-textColor2 dark:bg-gray-600 border-0 rounded" />
                         </div>
                         <a
-                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-[98px] border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
+                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
                             href="#"
                         >
                             <span className="mx-4 text-5xl text-textColor1">G</span>
                             <span>SIGN IN WITH GOOGLE</span>
                         </a>
                         <a
-                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-[98px] border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
+                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
                             href="#"
                         >
                             <img
-                                src=""
+                                src={github}
                                 alt="GitHub logo"
                                 className="w-12 mx-4"
                             />
@@ -146,7 +146,7 @@ function Signup() {
                     </h1>
                     <a
                         href="/login"
-                        className="flex justify-center bg-black text-textColor1 px-5 py-4 w-3/4 rounded-[98px] border-2-textColor1 text-lg md:text-2xl font-medium hover-effect hover:bg-textColor1 hover:text-bgColor hover:outline-black hover:shadow-bgColor"
+                        className="flex justify-center bg-black text-textColor1 px-5 py-4 w-3/4 rounded-md border-2-textColor1 text-lg md:text-2xl font-medium hover-effect hover:bg-textColor1 hover:text-bgColor hover:outline-black hover:shadow-bgColor"
                     >
                         LOG IN
                     </a>
