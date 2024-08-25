@@ -20,7 +20,8 @@ import Signup from "./components/mainComponents/Signup.jsx";
 import Login from "./components/mainComponents/Login.jsx";
 import Project from "./components/mainComponents/Project.jsx";
 // import Gallery from "./components/mainComponents/gallery.jsx";
-
+import EventRegistration from "./components/subComponents/EventRegistration.jsx";
+import SubmissionSuccess from "./components/subComponents/SubmissionSuccess.jsx";
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -30,6 +31,8 @@ const route = createBrowserRouter(
 
       {/* <Route path="/#aboutPage" element={<About />}></Route> */}
       <Route path="events" element={<Events />}></Route>
+      <Route path="register/:eventid" element={<EventRegistration />}></Route>
+      <Route path="/submission-success" element={<SubmissionSuccess />} />
       <Route path="members" element={<Member />}></Route>
       <Route path="feedback" element={<Feedback />}></Route>
       <Route path="signup" element={<Signup />}></Route>
