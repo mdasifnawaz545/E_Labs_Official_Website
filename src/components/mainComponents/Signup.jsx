@@ -1,6 +1,9 @@
 import { useState } from "react";
 import github from "../../../public/Images/github.png";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
+import { SiGithub, SiGoogle } from "react-icons/si";
+import { FcGoogle } from "react-icons/fc";
 function Signup() {
     const [username, setUsername] = useState("");
     const [year, setYear] = useState("");
@@ -44,11 +47,11 @@ function Signup() {
     };
 
     return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-start">
 
     
-        <div className="flex scale-90 flex-wrap items-center justify-evenly min-h-screen pt-4 gap-8 dark:bg-blue-100 dark:bg-lightBG">
-            <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mt-12 mb-16  border-textColor1 border-[5px] rounded-3xl overflow-auto dark:bg-white">
+        <div className="flex scale-75 flex-wrap items-start justify-evenly min-h-screen pt-4 gap-8 dark:bg-blue-100 dark:bg-lightBG">
+            <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mb-16  border-textColor1 border-[5px] rounded-3xl overflow-auto dark:bg-white">
                 <div className="flex flex-col sm:w-1/2 justify-start p-8 text-textColor1">
                     <h1 className="md:text-3xl text-xl font-medium mb-8">
                         SIGN UP
@@ -121,22 +124,17 @@ function Signup() {
                             <hr className="w-1/2 h-px bg-textColor2 dark:bg-gray-600 border-0 rounded" />
                         </div>
                         <a
-                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
+                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black  py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
                             href="#"
                         >
-                            <span className="mx-4 text-5xl text-textColor1">G</span>
-                            <span>SIGN IN WITH GOOGLE</span>
+                            <p className="w-full text-center flex justify-center items-center gap-3"><FcGoogle/>Sign In with Google</p>
                         </a>
                         <a
-                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black px-5 py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
+                            className="bg-bgColor dark:bg-white text-textColor1 dark:text-black  py-4 w-full rounded-md border-2-textColor1 text-lg md:text-2xl font-medium flex justify-center items-center hover-effect"
                             href="#"
                         >
-                            <img
-                                src={github}
-                                alt="GitHub logo"
-                                className="w-12 mx-4"
-                            />
-                            <span>SIGN IN WITH GITHUB</span>
+
+                        <p className="w-full text-center flex justify-center items-center gap-3"><SiGithub/>Sign In with Google</p>
                         </a>
                     </form>
                 </div>
