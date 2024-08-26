@@ -1,26 +1,23 @@
-import React from 'react'
-import Button from './Button'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from './Button';
 
-function EventCard({imgSource}) {
+function EventCard({ imgSource, eventId, eventName }) {
   return (
-    <div className='w-[24rem] scale-90 border border-textColor1 rounded-md h-[24rem] p-4 flex flex-col  gap-8'>
-        {/* <div>
-            <h2 className='text-5xl font-extrabold text-textColor1'>E LABS</h2>
-            <h3 className='text-2xl font-bold text-textColor1'> Presents</h3>
-        </div> */}
-        <div className='overflow-hidden w-88  border-textColor2 h-72 rounded-md border'>
-            <figure>
-                <img src="../Images/Screenshot 2024-06-28 182059.png" alt="" />
-            </figure>
-
-        </div>
-        <div className='flex items-center justify-evenly'>
-            <Button buttonName='Register Now !' ></Button>
-            <Button buttonName='More Details'></Button>
-        </div>
-        
+    <div className='w-[24rem] scale-90 border border-textColor1 rounded-md h-[24rem] p-4 flex flex-col gap-8'>
+      <div className='overflow-hidden w-88 border-textColor2 h-72 rounded-md border'>
+        <figure>
+          <img src={imgSource} alt={`Event ${eventId}`} />
+        </figure>
+      </div>
+      <div className='flex items-center justify-evenly'>
+        <Link to={`/register/${eventId}`}>
+          <Button buttonName='Register Now!' />
+        </Link>
+        <Button buttonName={eventName} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default EventCard
+export default EventCard;

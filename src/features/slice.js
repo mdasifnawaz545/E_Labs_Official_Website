@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   eventDetails: [
     {
+      id:101,
       name: "Design of Development",
+      img:"https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
       venue: "Campus 12, Auditorium",
       date: "25-07-2024",
       shortDescription: "",
@@ -11,7 +13,9 @@ const initialState = {
         "Lorem ipsum to esse. Quia ab nulla consequatur minima consectetur eius culpa beatae adipisci. Veniam, numquam? Ipsa harum fuga, nemo tenetur modi ea repudiandae iure perspiciatis voluptas architecto deleniti iste.Magni quibusdam modi ipsam femo aperiam sunt aut quidem! Reprehenderit, rem quasi. Odit recusandae eveniet repudiandae quidem voluptatum minus aperiam eaepudiandae cum similique iure iste inventore? Laboriosam, nobis ea.",
     },
     {
-      name: "Design of Development",
+      id:201,
+      name: "Web Development",
+      img:"https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
       venue: "Campus 12, Auditorium",
       date: "25-07-2024",
       shortDescription: "",
