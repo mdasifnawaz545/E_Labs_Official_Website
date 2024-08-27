@@ -1,222 +1,98 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "/Images/Trasnparent12 1.png";
+import night from "/Images/Night.png";
+import day from "/Images/Day.png";
+import menu from "/Images/menu.svg";
+import close from "/Images/close.svg";
 import Button from "../subComponents/Button";
 import ImageButton from "../subComponents/ImageButton";
-import { useSelector } from "react-redux";
-import "../../styles/OnlyNav.css";
 
-function Navbar() {
-    const [darkTheme, setDarkTheme] = useState(true);
-    const { theme } = useSelector((state) => state.theme);
-    const [ham, setHam] = useState(false);
-    const hamberger =
-        "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720320235/menu_s65s86.png";
+const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/events", label: "Events" },
+    { to: "/courses", label: "Courses" },
+    { to: "/projects", label: "Projects" },
+    { to: "/gallery", label: "Gallery" },
+];
 
-    // Handle hamburger menu visibility
-    const handleHamberger = () => {
-        setHam((prev) => !prev);
-    };
+const Navbar = () => {
+    const [dark, setDark] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Change theme function
-    function changeTheme() {
-        document.querySelector("html").classList.toggle("dark");
-    }
-
-    // Set the theme image based on the current theme
-    let themeImage = document.querySelector("html").classList.contains("dark")
-        ? "https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Day_v8jqbm.png"
-        : "https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Night_kwwujc.png";
-
-    // Effect to handle body scroll behavior
     useEffect(() => {
-        if (ham) {
-            document.body.style.position = 'fixed'; // Prevents scrolling
-            document.body.style.top = `-${window.scrollY}px`; // Adjust position
-            document.body.style.left = '0';
-            document.body.style.width = '100%';
-        } else {
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.left = '';
-            document.body.style.width = '';
-            window.scrollTo(0, parseInt(scrollY || '0') * -1); // Restore scroll position
-        }
+        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+        return () => (document.body.style.overflow = "auto");
+    }, [isMenuOpen]);
 
-        // Cleanup function to reset overflow on unmount
-        return () => {
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.left = '';
-            document.body.style.width = '';
-        };
-    }, [ham]);
-
-    // Close hamburger menu when a link is clicked
-    const handleLinkClick = () => {
-        setHam(false);
+    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+    const closeMenu = () => setIsMenuOpen(false);
+    const toggleTheme = () => {
+        document.querySelector("html").classList.toggle("dark");
+        setDark((prev) => !prev);
     };
+
+    const renderNavLinks = (onClickHandler) =>
+        navLinks.map(({ to, label }) => (
+            <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                    isActive ? "text-textColor1" : ""
+                }
+                onClick={onClickHandler}
+            >
+                {label}
+            </NavLink>
+        ));
 
     return (
-        <div className="p-2 w-full z-10 dark:bg-blue-100 dark:backdrop-blur-xl relative">
-            <div className="w-full p-2 h-16 flex items-center justify-evenly rounded-md navbar-icons">
-                <nav
-                    className={`w-full ${
-                        ham ? "backdrop-blur-" : ""
-                    } list-none flex items-center justify-between`}
-                >
-                    <div className="flex items-center justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg">
-                        <li>
-                            <figure className="flex items-center justify-center">
-                                <a href="/">
-                                    <img
-                                        src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
-                                        width={54}
-                                        alt="LOGO"
-                                    />
-                                </a>
-                            </figure>
-                        </li>
+        <>
+            <nav className="w-full py-2 px-4 z-50 dark:bg-blue-100 relative flex items-center justify-between">
+                <div className="border border-textColor1 rounded-lg py-1 px-0.5 w-fit h-fit">
+                    <Link to="/">
+                        <img src={logo} alt="logo" width={54} />
+                    </Link>
+                </div>
+                <div className="md:flex gap-16 items-center text-center text-xl hidden dark:text-black">
+                    {renderNavLinks()}
+                </div>
+                <div className="flex items-center gap-1.5">
+                    <ImageButton
+                        imageSource={dark ? day : night}
+                        func={toggleTheme}
+                    />
+                    <div className="md:hidden">
+                        <ImageButton
+                            imageSource={isMenuOpen ? close : menu}
+                            func={toggleMenu}
+                        />
                     </div>
-
-                    {/* Navigation links for normal screens */}
-                    <div
-                        className={`hidden md:flex flex-grow justify-center gap-16 text-textColor2 text-center text-xl relative z-10`}
+                    <div className="md:flex hidden">
+                        <Link to="/signup">
+                            <Button buttonName="SIGN UP" />
+                        </Link>
+                    </div>
+                </div>
+            </nav>
+            <div
+                className={`fixed top-0 left-0 w-screen h-screen backdrop-blur-3xl z-40 transition-transform transform ${
+                    isMenuOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+            >
+                <div className="flex flex-col items-center justify-center h-full text-2xl space-y-8 dark:text-black">
+                    {renderNavLinks(closeMenu)}
+                    <Link
+                        to="/signup"
+                        className="animate-bounce"
+                        onClick={closeMenu}
                     >
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""}`
-                            }
-                        >
-                            Home
-                        </NavLink>
-                        <NavLink
-                            to="/events"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""}`
-                            }
-                        >
-                            Events
-                        </NavLink>
-                        <NavLink
-                            to="/courses"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""}`
-                            }
-                        >
-                            Courses
-                        </NavLink>
-                        <NavLink
-                            to="/projects"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""}`
-                            }
-                        >
-                            Projects
-                        </NavLink>
-                        <NavLink
-                            to="/gallery"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""}`
-                            }
-                        >
-                            Gallery
-                        </NavLink>
-                    </div>
-
-                    {/* Hamburger menu button */}
-                    <div className="flex gap-2 pr-1 items-center relative z-20">
-                        <li>
-                            <ImageButton
-                                imageSource={themeImage}
-                                func={changeTheme}
-                            />
-                        </li>
-
-                        {/* Display "SIGN UP" button only on larger screens */}
-                        <div className="hidden md:flex gap-2">
-                            <li>
-                                <Link to="/signup">
-                                    <Button buttonName="SIGN UP" userClass="" />
-                                </Link>
-                            </li>
-                        </div>
-
-                        <li>
-                            <ImageButton
-                                userClass="md:hidden"
-                                imageSource={hamberger}
-                                func={handleHamberger}
-                            />
-                        </li>
-                    </div>
-                </nav>
+                        <Button buttonName="SIGN UP"/>
+                    </Link>
+                </div>
             </div>
-
-            {/* Navigation links for small screens */}
-            <div className={`slide-in-menu backdrop-blur-3xl ${ham ? "show" : ""}`}>
-                {ham && (
-                    <div className="pt-24 gap-8 flex flex-col items-center text-textColor2 text-2xl flex-wrap">
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Home
-                        </NavLink>
-                        <NavLink
-                            to="/events"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Events
-                        </NavLink>
-                        <NavLink
-                            to="/courses"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Courses
-                        </NavLink>
-                        <NavLink
-                            to="/projects"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Projects
-                        </NavLink>
-                        <NavLink
-                            to="/gallery"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Gallery
-                        </NavLink>
-                        <NavLink
-                            to="/signup"
-                            className={({ isActive }) =>
-                                `${isActive ? "text-textColor1" : ""} mb-4`
-                            }
-                            onClick={handleLinkClick}
-                        >
-                            Sign Up
-                        </NavLink>
-                    </div>
-                )}
-            </div>
-        </div>
+        </>
     );
-}
+};
 
 export default Navbar;
