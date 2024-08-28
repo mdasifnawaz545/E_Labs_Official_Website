@@ -21,8 +21,20 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
-        return () => (document.body.style.overflow = "auto");
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.width = "100%";
+        } else {
+            document.body.style.overflow = "auto";
+            document.body.style.position = "";
+            document.body.style.width = "";
+        }
+        return () => {
+            document.body.style.overflow = "auto";
+            document.body.style.position = "";
+            document.body.style.width = "";
+        };
     }, [isMenuOpen]);
 
     const toggleMenu = () => setIsMenuOpen((prev) => !prev);
