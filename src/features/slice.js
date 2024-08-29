@@ -213,7 +213,94 @@ const initialState = {
       eventName: "Event 12",
     },
   ],
-
+  studyMaterials: [
+    {
+      domain: "WEB DEVELOPMENT",
+      img: "/Images/std_mt/webdev.png",
+      sec: "webdev",
+      resUrls: [
+        {
+          name: "pdf 1",
+          url: "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf",
+        },
+        {
+          name: "pdf 2",
+          url: "",
+        },
+        {
+          name: "pdf 3",
+          url: "",
+        },
+        {
+          name: "pdf 4",
+          url: "",
+        },
+        {
+          name: "pdf 5",
+          url: "",
+        },
+        {
+          name: "pdf 6",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "AI/ML",
+      img: "/Images/std_mt/aiml.png",
+      sec: "aiml",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "JAVA",
+      img: "/Images/std_mt/java.png",
+      sec: "java",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "UI / UX",
+      img: "/Images/std_mt/uiux.png",
+      sec: "uiux",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CLOUD COMPUTING",
+      img: "/Images/std_mt/cloud.png",
+      sec: "cloud",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "IoT & EMBEDDED",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+  ],
 };
 
 const slice = createSlice({
