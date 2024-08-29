@@ -28,6 +28,7 @@ function Events() {
             <EventDetails eventInfo={el} />
           </div>
         ))}
+
       </Slider>
     </div>
   );

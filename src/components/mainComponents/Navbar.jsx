@@ -1,147 +1,110 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import Button from '../subComponents/Button'
-import ImageButton from '../subComponents/ImageButton'
-import { useSelector } from 'react-redux';
-import '../../styles/OnlyNav.css'
+import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import logo from "/Images/Trasnparent12 1.png";
+import night from "/Images/Night.png";
+import day from "/Images/Day.png";
+import menu from "/Images/menu.svg";
+import close from "/Images/close.svg";
+import Button from "../subComponents/Button";
+import ImageButton from "../subComponents/ImageButton";
 
-function Navbar() {
-  let [darkTheme, setDarkTheme] = useState(true);
-  let { theme } = useSelector(state => state.theme);
-  let [ham,setHam]=useState(false);
-  let bg = "";
-  let hamberger = 'https://res.cloudinary.com/dpqdgcipi/image/upload/v1720320235/menu_s65s86.png'
+const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/events", label: "Events" },
+    { to: "/courses", label: "Courses" },
+    { to: "/projects", label: "Projects" },
+    { to: "/gallery", label: "Gallery" },
+];
 
-  
-  
+const Navbar = () => {
+    const [dark, setDark] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleHamberger = async () => {
-    const navb=document.querySelector('.hamburger')
-    console.log("Hamburger was clicked.")
-    console.log(navb)
-    setHam((prev)=>(prev=!prev));
-    console.log(ham);
-    // if(ham){
-    //   navb.style.visibility='hidden';
-    // }
-    // else{
-    //   navb.style.visibility='visible';
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.width = "100%";
+        } else {
+            document.body.style.overflow = "auto";
+            document.body.style.position = "";
+            document.body.style.width = "";
+        }
+        return () => {
+            document.body.style.overflow = "auto";
+            document.body.style.position = "";
+            document.body.style.width = "";
+        };
+    }, [isMenuOpen]);
 
-    // }
+    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+    const closeMenu = () => setIsMenuOpen(false);
+    const toggleTheme = () => {
+        document.querySelector("html").classList.toggle("dark");
+        setDark((prev) => !prev);
+    };
 
-    // Same work has been done using ternary operator in class attribute iteself.
-
-  }
-
-
-
-  let themeImage = (document.querySelector('html').classList.contains('dark')) ? "https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Day_v8jqbm.png" : "https://res.cloudinary.com/dpqdgcipi/image/upload/v1719394975/Night_kwwujc.png"
-
-  function changeTheme() {
-    document.querySelector('html').classList.toggle('dark')
-  }
-
-  return (
-    <div className='p-2 w-full z-10 dark:bg-blue-100 dark:backdrop-blur-xl'>
-      <div className='w-full p-2 h-16 flex items-center justify-evenly  rounded-md'>
-        <nav className={`w-full ${ham?"backdrop-blur-3xl":""} list-none flex items-center  justify-between`}>
-          <div className='flex items-center  justify-between border-1 border-textColor1 py-1 px-[1px] rounded-lg'>
-            <li className=''>
-              <figure className='flex items-center justify-center'>
-                <a href="/">
-                  <img
-                    src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
-                    width={54}
-                    alt="LOGO"
-                  />
-                </a>
-
-                {/* <figcaption className='font-bold text-xl text-textColor1'>E Labs</figcaption> */}
-              </figure>
-            </li>
-          </div>
-
-          <div className={`sm:visible md:visible lg:visible ${ham?"":"max-[900px]:hidden"} xl:visible 2xl:visible text-textColor2 flex max-[900px]:flex-col  duration-200 max-[900px]:mt-[42rem] text-center max-[900px]:text-3xl max-[900px] ${bg} gap-16 transition-all  hamburger justify-center items-center max-[900px]:justify-center max-[900px]:items-center`}>
-            <li
-
-
+    const renderNavLinks = (onClickHandler) =>
+        navLinks.map(({ to, label }) => (
+            <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                    isActive ? "text-textColor1" : ""
+                }
+                onClick={onClickHandler}
             >
-              <NavLink to="/" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
+                {label}
+            </NavLink>
+        ));
 
-                Home
-              </NavLink>
-            </li>
-
-            <li
-
-
+    return (
+        <>
+            <nav className="w-full py-2 px-4 z-50 dark:bg-blue-100 relative flex items-center justify-between">
+                <div className="border border-textColor1 rounded-lg py-1 px-0.5 w-fit h-fit">
+                    <Link to="/">
+                        <img src={logo} alt="logo" width={54} />
+                    </Link>
+                </div>
+                <div className="md:flex gap-16 items-center text-center text-xl hidden dark:text-black">
+                    {renderNavLinks()}
+                </div>
+                <div className="flex items-center gap-1.5">
+                    <ImageButton
+                        imageSource={dark ? day : night}
+                        func={toggleTheme}
+                    />
+                    <div className="md:hidden">
+                        <ImageButton
+                            imageSource={isMenuOpen ? close : menu}
+                            func={toggleMenu}
+                        />
+                    </div>
+                    <div className="md:flex hidden">
+                        <Link to="/signup">
+                            <Button buttonName="SIGN UP" />
+                        </Link>
+                    </div>
+                </div>
+            </nav>
+            <div
+                className={`fixed top-0 left-0 w-screen h-screen backdrop-blur-3xl z-40 transition-transform transform ${
+                    isMenuOpen ? "translate-x-0" : "translate-x-full"
+                }`}
             >
-              <NavLink to="/events" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-
-              Events
-              </NavLink>
-            </li>
-
-            <li
-
-
-            >
-              <NavLink to="/courses" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-
-              Courses
-              </NavLink>
-            </li>
-
-            <li
-
-
-            >
-              <NavLink to="/projects" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-
-                Projects
-              </NavLink>
-            </li>
-            <li
-
-
-            >
-              <NavLink to="/gallery" className={({ isActive }) => (`${(isActive ? "text-textColor1" : "")}`)}>
-                Gallery
-              </NavLink>
-            </li>
-
-          </div>
-
-          <div className='flex gap-2 pr-1'>
-
-            <li>
-              <ImageButton imageSource={themeImage} func={changeTheme} />
-            </li>
-
-            <div className='flex gap-2 max-[467px]:hidden'>
-              <li>
-                <Link to={'/signup'}>
-                  <Button buttonName='SIGN UP' userClass='' />
-                </Link>
-                {/* <Button buttonName="SIGN UP" userClass="" href='/signup'/> */}
-              </li>
-              {/* <li>
-                <Link to={'/login'}>
-                  <Button buttonName='LOG IN' />
-                </Link>
-              </li> */}
-
+                <div className="flex flex-col items-center justify-center h-full text-2xl space-y-8 dark:text-black">
+                    {renderNavLinks(closeMenu)}
+                    <Link
+                        to="/signup"
+                        className="animate-bounce"
+                        onClick={closeMenu}
+                    >
+                        <Button buttonName="SIGN UP"/>
+                    </Link>
+                </div>
             </div>
-            <li>
-              <ImageButton userClass={"min-[850px]:hidden"} imageSource={hamberger} func={handleHamberger}/>
-            </li>
-          </div>
+        </>
+    );
+};
 
-        </nav>
-
-      </div>
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
