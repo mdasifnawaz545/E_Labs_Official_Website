@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
-import { SiGithub, SiGoogle } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
 import { ImProfile } from "react-icons/im";
 
 function Signup() {
@@ -151,7 +148,7 @@ function Signup() {
                                 <p className="text-center flex justify-center items-center gap-3">
                                     <FcGoogle />
                                     {googleLoading
-                                        ? "Signing in with Google..."
+                                        ? "Signing in..."
                                         : "Sign In with Google"}
                                 </p>
                             </button>
@@ -163,7 +160,7 @@ function Signup() {
                                 <p className="text-center flex justify-center items-center gap-3">
                                     <SiGithub />
                                     {githubLoading
-                                        ? "Signing in with GitHub..."
+                                        ? "Signing in..."
                                         : "Sign In with GitHub"}
                                 </p>
                             </button>
