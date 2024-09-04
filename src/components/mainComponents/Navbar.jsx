@@ -61,12 +61,12 @@ const Navbar = () => {
     return (
         <>
             <nav className="w-full py-2 px-4 z-50 dark:bg-blue-100 relative flex items-center justify-between">
-                <div className="border border-textColor1 rounded-lg py-1 px-0.5 w-fit h-fit">
+                <div className="border border-textColor1 p-[0.2rem] rounded-lg ">
                     <Link to="/">
-                        <img src={logo} alt="logo" width={54} />
+                        <img src={logo} alt="logo" width={38} />
                     </Link>
                 </div>
-                <div className="md:flex gap-16 items-center text-center text-xl hidden dark:text-black">
+                <div className="md:flex gap-16 items-center text-center text-xl hidden scale-85 dark:text-black">
                     {renderNavLinks()}
                 </div>
                 <div className="flex items-center gap-1.5">

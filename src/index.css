@@ -4,9 +4,12 @@
 @tailwind utilities;
 
 @layer base {
-  html,
+  html{
+    overflow: auto;
+  }
   body {
-    font-family: "Varela Round", sans-serif;
+    /* font-family: "Varela Round", sans-serif; */
+    /* font-family:'cursive'; */
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -17,16 +20,16 @@
   body {
     background-image: url("https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png");
     backdrop-filter: blur(100px);
-    background-size: contain;
+    /* background-size: auto; */
     @apply dark:bg-blue-50
     /* background-color: black; 
     filter: blur(3); */;
   }
 
-  .firstPage {
+  /* .firstPage {
     background-image: url("https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png");
     background-size: contain;
-  }
+  } */
 
   ::-webkit-scrollbar {
     width: 5px;
