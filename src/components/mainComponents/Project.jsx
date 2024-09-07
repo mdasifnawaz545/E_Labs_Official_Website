@@ -9,7 +9,6 @@ const Project = () => {
   let [project, setProjects] = useState(projects[-1]);
 
   if (project) {
-    project = projects[0];
     return (
       <div className="container mx-auto px-5 dark">
         <div className="mt-10 mb-20 rounded-xl border-textColor1 border-2 p-5 flex flex-col gap-6 lg:gap-10 overflow-x-hidden">
