@@ -27,7 +27,7 @@ import AddEvent from "./components/mainComponents/AddEvent.jsx";
 import EventRegistration from "./components/subComponents/EventRegistration.jsx";
 import SubmissionSuccess from "./components/subComponents/SubmissionSuccess.jsx";
 import AddMember from "./components/mainComponents/AddMember.jsx";
-import SubmitFeedback from "./components/mainComponents/submitFeedback.jsx";
+import SubmitFeedback from "./components/mainComponents/SubmitFeedback.jsx";
 
 // import Project from "./components/mainComponents/Project.jsx";
 // import Gallery from "./components/mainComponents/gallery.jsx";
