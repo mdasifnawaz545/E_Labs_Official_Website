@@ -1,16 +1,13 @@
 import React from "react";
 import {
-  DatePicker,
   Input,
   Textarea,
   TimeInput,
-  Button,
   Image,
+  DateInput,
 } from "@nextui-org/react";
-import { FaCamera, FaPlus } from "react-icons/fa";
-
-let count = 1;
-// const [instructors, setInstructors] = useState(count);
+import { FaCamera } from "react-icons/fa";
+import { FileUploader } from "../subComponents/FileUploader";
 
 const AddEvent = () => {
   return (
@@ -29,20 +26,22 @@ const AddEvent = () => {
               isClearable
               color="warning"
               isRequired
+              classNames={{ label: "text-md" }}
             ></Input>
             <Textarea
               label="Event Description"
               variant="bordered"
               color="warning"
               minRows={1}
+              classNames={{ label: "text-md" }}
             ></Textarea>
             <Textarea
               label="Event Organizers/Instructors"
               variant="bordered"
-              isClearable
               color="warning"
               minRows={1}
               isRequired
+              classNames={{ label: "text-md" }}
             ></Textarea>
             <Input
               label="Event Location"
@@ -50,21 +49,21 @@ const AddEvent = () => {
               isClearable
               color="warning"
               isRequired
+              classNames={{ label: "text-md" }}
             ></Input>
-            <DatePicker
+            <DateInput
               label="Event Date"
               variant="bordered"
-              hideTimeZone
               color="warning"
               isRequired
-              className="dark"
-              showMonthAndYearPickers
-            ></DatePicker>
+              classNames={{ input: "text-md", label: "text-md" }}
+            ></DateInput>
             <TimeInput
               label="Event Time"
               variant="bordered"
               color="warning"
               isRequired
+              classNames={{ input: "text-md", label: "text-md" }}
             ></TimeInput>
           </div>
 
@@ -75,27 +74,14 @@ const AddEvent = () => {
               alt="project_logo"
               radius="lg"
             />
-            <Button
-              radius="lg"
-              variant="shadow"
-              className="bg-textColor1 w-[250px] hover:scale-105 transition-all ease-in-out duration-200 text-neutral-900"
-              size="lg"
+            <FileUploader
+              label={"Upload Image"}
               startContent={<FaCamera className="text-neutral-900 text-xl" />}
-            >
-              <h1 className="text-xl font-bold">Upload Image</h1>
-            </Button>
+              accept={"image/*"}
+            />
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <Button
-            radius="lg"
-            variant="shadow"
-            className="bg-textColor1 w-[250px] hover:scale-105 transition-all ease-in-out duration-200 text-neutral-900"
-            size="lg"
-          >
-            <h1 className="text-xl font-bold">SUBMIT</h1>
-          </Button>
-        </div>
+        <div className="flex items-center justify-center"></div>
       </div>
     </div>
   );
