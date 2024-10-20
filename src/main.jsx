@@ -26,6 +26,8 @@ import Gallery from "./components/mainComponents/Gallery.jsx";
 import AddEvent from "./components/mainComponents/AddEvent.jsx";
 import EventRegistration from "./components/subComponents/EventRegistration.jsx";
 import SubmissionSuccess from "./components/subComponents/SubmissionSuccess.jsx";
+import AddMember from "./components/mainComponents/AddMember.jsx";
+
 // import Project from "./components/mainComponents/Project.jsx";
 // import Gallery from "./components/mainComponents/gallery.jsx";
 
@@ -58,6 +60,7 @@ const route = createBrowserRouter(
       <Route path="projects" element={<Project />}></Route>
       <Route path="gallery" element={<Gallery />}></Route>
       <Route path="addevent" element={<AddEvent />}></Route>
+      <Route path="addmember" element={<AddMember />}></Route>
 
       {/* <Route path="gallery" element={<Gallery />}></Route> */}
     </Route>
