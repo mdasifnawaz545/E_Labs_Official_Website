@@ -10,7 +10,6 @@ export const FileUploader = ({ accept, label, startContent }) => {
 
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0];
-    console.log(fileUploaded);
   };
 
   return (

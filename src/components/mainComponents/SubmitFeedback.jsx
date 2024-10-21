@@ -20,9 +20,7 @@ const SubmitFeedback = () => {
             showSteps={true}
             maxValue={10}
             minValue={1}
-            onChangeEnd={(value) => {
-              setRating(value);
-            }}
+            onChangeEnd={(value) => setRating(value)}
             marks={[
               {
                 value: 1,
