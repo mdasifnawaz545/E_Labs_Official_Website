@@ -69,7 +69,7 @@ const AddEvent = () => {
 
           <div className="flex max-w-[280px] w-full flex-col gap-6 items-center justify-center">
             <Image
-              className="aspect-square object-cover border-2 min-w-[70px] border-textColor1"
+              className="object-cover border-2 min-w-[70px] border-textColor1"
               src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
               alt="project_logo"
               radius="lg"
