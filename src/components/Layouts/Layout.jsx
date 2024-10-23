@@ -5,7 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 
 function Layout() {
   return (
-    <NextUIProvider>
+    <NextUIProvider locale="en-IN">
       <div className="flex flex-col">
         <Navbar />
         <Outlet />
