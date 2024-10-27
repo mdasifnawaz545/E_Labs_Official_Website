@@ -28,7 +28,7 @@ function FirstPage() {
         <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/next.png" />
         {/* Testing Components */}
 
-        <Upload/>
+        {/* <Upload/> */}
 
 
       </div>
