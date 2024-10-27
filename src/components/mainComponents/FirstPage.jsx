@@ -5,7 +5,7 @@ import Member from './Member'
 import Signup from '../mainComponents/Signup'
 import Login from '../mainComponents/Login'
 import EventPage from '../mainComponents/EventPage'
-import Upload from '../mainComponents/Upload'
+
 
 function FirstPage() {
   const widgetRef = useRef();
@@ -28,7 +28,6 @@ function FirstPage() {
         <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/next.png" />
         {/* Testing Components */}
 
-        {/* <Upload/> */}
 
 
       </div>
