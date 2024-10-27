@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./App.jsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
@@ -25,54 +24,35 @@ import Project from "./components/mainComponents/Project.jsx";
 import Gallery from "./components/mainComponents/Gallery.jsx";
 import EventRegistration from "./components/subComponents/EventRegistration.jsx";
 import SubmissionSuccess from "./components/subComponents/SubmissionSuccess.jsx";
-// import Project from "./components/mainComponents/Project.jsx";
-// import Gallery from "./components/mainComponents/gallery.jsx";
+import PrivateRoute from "./components/subComponents/PrivateRoute.jsx";
+import Profile from "./components/mainComponents/Profile.jsx";
 
 const route = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="about" element={<About />}></Route>
-      {/* <Route path="project" element={<Projects />}></Route> */}
-
-      {/* <Route path="/#aboutPage" element={<About />}></Route> */}
-      <Route path="events" element={<Events />}></Route>
-      <Route path="members" element={<Member />}></Route>
-      <Route path="feedback" element={<Feedback />}></Route>
-      <Route path="signup" element={<Signup />}></Route>
-      <Route path="login" element={<Login />}></Route>
-      <Route path="courses" element={<StudyMt />}></Route>
-      <Route path="courses/:sec" element={<Materials />}></Route>
-      <Route path="courses/:sec/:pdf" element={<PdfView />}></Route>
- <Route path="/" element={<Home />}></Route>
-            <Route path="about" element={<About />}></Route>
-            {/* <Route path="project" element={<Projects />}></Route> */}
-
-            {/* <Route path="/#aboutPage" element={<About />}></Route> */}
-            <Route path="events" element={<Events />}></Route>
-            <Route
-                path="register/:eventid"
-                element={<EventRegistration />}
-            ></Route>
+    createRoutesFromElements(
+        <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="events" element={<Events />} />
+            <Route path="members" element={<Member />} />
+            <Route path="feedback" element={<Feedback />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="login" element={<Login />} />
+            <Route path="courses" element={<StudyMt />} />
+            <Route path="courses/:sec" element={<Materials />} />
+            <Route path="courses/:sec/:pdf" element={<PdfView />} />
+            <Route path="register/:eventid" element={<EventRegistration />} />
             <Route path="/submission-success" element={<SubmissionSuccess />} />
-            <Route path="members" element={<Member />}></Route>
-            <Route path="feedback" element={<Feedback />}></Route>
-            <Route path="signup" element={<Signup />}></Route>
-            <Route path="login" element={<Login />}></Route>
-            <Route path="projects" element={<Project />}></Route>
-            <Route path="gallery" element={<Gallery />}></Route>
-
-      {/* <Route path="project" element={<Project />}></Route> */}
-      {/* <Route path="gallery" element={<Gallery />}></Route> */}
-    </Route>
-  )
+            <Route path="projects" element={<Project />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="/user/:uid" element={<PrivateRoute element={<Profile />} />} />
+        </Route>
+    )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={route} />
-    </Provider>
-  </React.StrictMode>
-
+    <React.StrictMode>
+        <Provider store={store}>
+            <RouterProvider router={route} />
+        </Provider>
+    </React.StrictMode>
 );

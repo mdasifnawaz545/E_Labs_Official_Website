@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { ImProfile } from "react-icons/im";
+import { ImProfile } from "react-icons/im"
+import {fbhandleGithubSignIn, fbhandleGoogleSignIn} from "../subComponents/firebase";
 
 function Signup() {
     const [email, setEmail] = useState("");
@@ -38,32 +39,38 @@ function Signup() {
                     setError(null);
                 }, 2000);
             }
-            console.log("Email:", email);
-            console.log("Password:", password);
+            // console.log("Email:", email);
+            // console.log("Password:", password);
         }, 1000);
     };
 
-    const handleGoogleSignIn = () => {
-        setGoogleLoading(true);
+    const handleGoogleSignIn = async () => {
+      setGoogleLoading(true);
+      try {
+          await fbhandleGoogleSignIn({ setGoogleLoading, setError });
+          // console.log("Signed in with Google");
+          // Handle successful sign-in (redirect or update UI)
+      } catch (error) {
+          // console.error("Google sign-in failed:", error);
+          setError("Google Sign-In failed. Please try again.");
+      } finally {
+          setGoogleLoading(false);
+      }
+  };
 
-        // Simulate Google Sign-In
-        setTimeout(() => {
-            setGoogleLoading(false);
-            // Redirect or handle Google Sign-In result
-            console.log("Signed in with Google");
-        }, 1000);
-    };
-
-    const handleGitHubSignIn = () => {
-        setGithubLoading(true);
-
-        // Simulate Google Sign-In
-        setTimeout(() => {
-            setGithubLoading(false);
-            // Redirect or handle Google Sign-In result
-            console.log("Signed in with GitHub");
-        }, 1000);
-    };
+    const handleGitHubSignIn = async () => {
+      setGithubLoading(true);
+      try {
+          await fbhandleGithubSignIn({ setGithubLoading, setError });
+          // console.log("Signed in with GitHub");
+          // Handle successful sign-in (redirect or update UI)
+      } catch (error) {
+          // console.error("GitHub sign-in failed:", error);
+          setError("GitHub Sign-In failed. Please try again.");
+      } finally {
+          setGithubLoading(false);
+      }
+  };
 
     return (
         <div className="flex flex-col items-center justify-start">

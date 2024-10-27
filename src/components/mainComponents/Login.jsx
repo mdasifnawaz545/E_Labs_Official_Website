@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { ImProfile } from "react-icons/im";
 import { CgProfile } from "react-icons/cg";
+import { fbhandleGithubSignIn, fbhandleGoogleSignIn } from "../subComponents/firebase";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [googleLoading, setGoogleLoading] = useState(false); // New state for Google loading
-    const [githubLoading, setGithubLoading] = useState(false); // New state for GitHub loading
+    const [googleLoading, setGoogleLoading] = useState(false);
+    const [githubLoading, setGithubLoading] = useState(false);
     const [error, setError] = useState(null);
+    
+    const navigate = useNavigate(); // Initialize navigate
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
         setError(null);
@@ -22,35 +25,41 @@ function Login() {
             setLoading(false);
             if (email !== "test" || password !== "password") {
                 setError("Invalid username or password");
-                // Clear error after 2 seconds
                 setTimeout(() => {
                     setError(null);
                 }, 2000);
             } else {
-                console.log("Email:", email);
-                console.log("Password:", password);
+                // console.log("Email:", email);
+                // console.log("Password:", password);
+                navigate("/"); // Redirect to home on successful login
             }
         }, 1000);
     };
 
-    const handleGoogleSignIn = () => {
+    const handleGoogleSignIn = async () => {
         setGoogleLoading(true);
-
-        // Simulate Google Sign-In
-        setTimeout(() => {
+        try {
+            await fbhandleGoogleSignIn({ setGoogleLoading, setError });
+            // console.log("Signed in with Google");
+        } catch (error) {
+            // console.error("Google sign-in failed:", error);
+            setError("Google Sign-In failed. Please try again.");
+        } finally {
             setGoogleLoading(false);
-            console.log("Signed in with Google");
-        }, 1000);
+        }
     };
 
-    const handleGitHubSignIn = () => {
+    const handleGitHubSignIn = async () => {
         setGithubLoading(true);
-
-        // Simulate GitHub Sign-In
-        setTimeout(() => {
+        try {
+            await fbhandleGithubSignIn({ setGithubLoading, setError });
+            // console.log("Signed in with GitHub");
+        } catch (error) {
+            // console.error("GitHub sign-in failed:", error);
+            setError("GitHub Sign-In failed. Please try again.");
+        } finally {
             setGithubLoading(false);
-            console.log("Signed in with GitHub");
-        }, 1000);
+        }
     };
 
     return (
