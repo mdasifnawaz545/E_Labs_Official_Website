@@ -5,7 +5,7 @@
 
 @layer base {
   html{
-    overflow: auto;
+    /* overflow: auto; */
   }
   body {
     /* font-family: "Varela Round", sans-serif; */
@@ -16,6 +16,7 @@
     width: 100%;
     min-height: 100vh;
     scroll-behavior: smooth;
+    font-size: 125%;
   }
   body {
     background-image: url("https://res.cloudinary.com/dpqdgcipi/image/upload/v1720238432/Background_hxyroh.png");
@@ -132,8 +133,8 @@ input::-ms-reveal {
 
 /* CSS for sliding menu */
 .slide-in-menu {
-  position: fixed;
-  top: 0;
+  /* position: fixed; */
+  /* top: 0; */
   right: -100%; /* Start off-screen */
   width: 100%;
   height: 100%;
