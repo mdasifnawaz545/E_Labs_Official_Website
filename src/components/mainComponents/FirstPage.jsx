@@ -17,8 +17,8 @@ function FirstPage() {
           <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />
         </figure>
         <div className="heading flex items-center justify-center flex-col gap-2">
-          <motion.h1   className='text-textColor1 text-center font-black text-5xl '>Empowering through Collaboration:</motion.h1>
-          <motion.h2  className='text-textColor1 text-center font-black text-3xl' >
+          <motion.h1  animate={{rotateZ:360}} className='text-textColor1 text-center font-black text-5xl '>Empowering through Collaboration:</motion.h1>
+          <motion.h2 animate={{scale:1.2}} className='text-textColor1 text-center font-black text-3xl' >
             Peer-to-Peer Learning at <span className='text-5xl text-center font-black break-inside-avoid whitespace-nowrap'>E Labs</span>
           </motion.h2>
         </div>

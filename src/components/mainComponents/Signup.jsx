@@ -3,7 +3,7 @@ import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { ImProfile } from "react-icons/im"
 import {fbhandleGithubSignIn, fbhandleGoogleSignIn} from "../subComponents/firebase";
-
+import { motion } from "framer-motion";
 function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -73,7 +73,7 @@ function Signup() {
   };
 
     return (
-        <div className="flex flex-col items-center justify-start">
+        <motion.div initial={{x:"-100vw"}} animate={{x:0}} className="flex flex-col items-center justify-start">
             <div className="flex scale-75 flex-wrap items-start justify-evenly min-h-screen pt-4 gap-8 dark:bg-blue-100 dark:bg-lightBG">
                 <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mb-16 border-textColor1 border-[5px] rounded-3xl overflow-auto dark:bg-white">
                     <div className="flex flex-col sm:w-1/2 justify-start p-8 text-textColor1">
@@ -186,7 +186,7 @@ function Signup() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
