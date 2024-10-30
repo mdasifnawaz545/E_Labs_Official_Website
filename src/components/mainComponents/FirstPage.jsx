@@ -11,7 +11,7 @@ function FirstPage() {
   const widgetRef = useRef();
 
   return (
-    <div className='flex flex-col items-center justify-center flex-grow '>
+    <div className='flex flex-col items-center justify-center flex-grow xl:scale-125'>
       <div className='flex scale-95 flex-col items-center justify-center  gap-6'>
         <figure>
           <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />

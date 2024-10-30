@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "/Images/Trasnparent12 1.png";
 import night from "/Images/Night.png";
 import day from "/Images/Day.png";
@@ -7,6 +7,9 @@ import menu from "/Images/menu.svg";
 import close from "/Images/close.svg";
 import Button from "../subComponents/Button";
 import ImageButton from "../subComponents/ImageButton";
+import { auth } from "../subComponents/firebase"; // Adjust the path as necessary
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth"; // Ensure you import signOut
 
 const navLinks = [
     { href: "#home", label: "Home", route: "/" },
@@ -18,25 +21,18 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+    const [user] = useAuthState(auth); // Get the current user from context
     const [dark, setDark] = useState(true);
     const [activeSection, setActiveSection] = useState("");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation(); // Get current location
 
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = "hidden";
-            document.body.style.position = "fixed";
-            document.body.style.width = "100%";
         } else {
             document.body.style.overflow = "auto";
-            document.body.style.position = "";
-            document.body.style.width = "";
         }
-        return () => {
-            document.body.style.overflow = "auto";
-            document.body.style.position = "";
-            document.body.style.width = "";
-        };
     }, [isMenuOpen]);
 
     useEffect(() => {
@@ -68,23 +64,34 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [activeSection]);
 
-    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+    const toggleMenu = () => {
+        if (!isMenuOpen) {
+            window.scrollTo(0, 0); // Scroll to the top when opening the menu
+        }
+        setIsMenuOpen((prev) => !prev);
+    };
     const closeMenu = () => setIsMenuOpen(false);
+
     const toggleTheme = () => {
         document.querySelector("html").classList.toggle("dark");
         setDark((prev) => !prev);
     };
 
+    const handleSignOut = async () => {
+        await signOut(auth); // Call the signOut method
+    };
+
     const renderNavLinks = (onClickHandler) =>
         navLinks.map(({ href, label, route }) => {
-            const isHomePage = location.pathname === "/";
+            const isHomePage =
+                location.pathname === "/" || location.pathname === "";
             const targetHref = isHomePage ? href : route;
 
             return isHomePage ? (
                 <a
                     key={href}
                     href={targetHref}
-                    className={`hover:text-textColor2 ${
+                    className={`hover:text-textColor2 dark:hover:text-textColor1 text-2xl ${
                         activeSection === href.substring(1)
                             ? "text-textColor1"
                             : ""
@@ -97,8 +104,11 @@ const Navbar = () => {
                 <Link
                     key={href}
                     to={targetHref}
-                    className="hover:text-textColor2"
-                    onClick={onClickHandler}
+                    className="hover:text-textColor2 text-2xl"
+                    onClick={() => {
+                        onClickHandler();
+                        closeMenu(); // Close the menu on link click
+                    }}
                 >
                     {label}
                 </Link>
@@ -107,16 +117,16 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full py-2 px-4 z-50 dark:bg-blue-100 sticky top-0 flex items-center justify-between backdrop-brightness-90 backdrop-blur-3xl">
-                <div className="border border-textColor1 p-[0.2rem] rounded-lg backdrop-blur-lg">
-                    <Link to="/">
-                        <img src={logo} alt="logo" width={65} />
+            <nav className="w-full py-6 px-4 z-50 dark:bg-blue-100 sticky top-0 flex items-center justify-center backdrop-blur-3xl">
+                <div className="border border-textColor1 rounded-lg backdrop-blur-lg fixed my-2 left-4">
+                    <Link to="/#home">
+                        <img src={logo} alt="logo" width={48} />
                     </Link>
                 </div>
                 <div className="md:flex gap-16 items-center text-center text-xl hidden scale-85 dark:text-black">
                     {renderNavLinks()}
                 </div>
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 fixed right-4">
                     <ImageButton
                         imageSource={dark ? day : night}
                         func={toggleTheme}
@@ -125,29 +135,59 @@ const Navbar = () => {
                         <ImageButton
                             imageSource={isMenuOpen ? close : menu}
                             func={toggleMenu}
+                            aria-label={isMenuOpen ? "Close menu" : "Open menu"} // Add accessibility
                         />
                     </div>
                     <div className="md:flex hidden">
-                        <Link to="/signup">
-                            <Button buttonName="SIGN UP" />
-                        </Link>
+                        {user ? (
+                            <>
+                                <Link to={`/user/${user.uid}`}>
+                                    <Button
+                                        buttonName={user.displayName}
+                                        userClass="me-2"
+                                    />
+                                </Link>
+                                <span onClick={handleSignOut}>
+                                    <Button buttonName="SIGN OUT" />
+                                </span>
+                            </>
+                        ) : (
+                            <Link to="/signup">
+                                <Button buttonName="SIGN UP" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             </nav>
+
             <div
-                className={`fixed top-0 left-0 w-screen h-screen backdrop-blur-3xl z-40 transition-transform transform ${
+                className={`relative w-screen h-screen backdrop-blur-3xl z-40 transition-transform transform ${
                     isMenuOpen ? "translate-x-0" : "hidden translate-x-full"
                 }`}
             >
                 <div className="flex flex-col items-center justify-center h-full text-2xl space-y-8 dark:text-black">
                     {renderNavLinks(closeMenu)}
-                    <Link
-                        to="/signup"
-                        className="animate-bounce"
-                        onClick={closeMenu}
-                    >
-                        <Button buttonName="SIGN UP" />
-                    </Link>
+                    {user ? (
+                        <>
+                            <Link to={`/user/${user.uid}`}>
+                                <Button
+                                    buttonName={user.displayName}
+                                    userClass="me-2"
+                                />
+                            </Link>
+                            <span onClick={handleSignOut}>
+                                <Button buttonName="SIGN OUT" />
+                            </span>
+                        </>
+                    ) : (
+                        <Link
+                            to="/signup"
+                            className="animate-bounce"
+                            onClick={closeMenu}
+                        >
+                            <Button buttonName="SIGN UP" />
+                        </Link>
+                    )}
                 </div>
             </div>
         </>
