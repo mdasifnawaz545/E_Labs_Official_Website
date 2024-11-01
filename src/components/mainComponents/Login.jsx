@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { CgProfile } from "react-icons/cg";
 import { fbhandleGithubSignIn, fbhandleGoogleSignIn } from "../subComponents/firebase";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ function Login() {
     const [googleLoading, setGoogleLoading] = useState(false);
     const [githubLoading, setGithubLoading] = useState(false);
     const [error, setError] = useState(null);
-    
+
     const navigate = useNavigate(); // Initialize navigate
 
     const handleSubmit = async (event) => {
@@ -50,6 +50,15 @@ function Login() {
         }
     };
 
+    const logInVariant = {
+        initial: {
+            x: "100vw"
+        },
+        final: {
+            x: 0
+        }
+    }
+
     const handleGitHubSignIn = async () => {
         setGithubLoading(true);
         try {
@@ -64,7 +73,7 @@ function Login() {
     };
 
     return (
-        <motion.div initial={{x:"100vw"}} animate={{x:0}} className="flex flex-col items-center justify-start">
+        <motion.div variants={logInVariant} initial="initial" animate="final" className="flex flex-col items-center justify-start">
             <div className="flex scale-75 flex-wrap items-center justify-evenly min-h-screen gap-8 dark:bg-blue-100 dark:bg-lightBG">
                 <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mt-8 mb-16 border-textColor1 border-[5px] rounded-3xl overflow-auto">
                     <div className="flex flex-col sm:w-1/2 justify-start p-8 text-textColor1">

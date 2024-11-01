@@ -14,6 +14,15 @@ function Signup() {
     const [githubLoading, setGithubLoading] = useState(false); // New state for GitHub loading
     const [error, setError] = useState(null);
 
+const signInVariants={
+    initial:{
+        x:"-100vw"
+    },
+    final:{
+        x:0
+    }
+}
+
     const handleChange = (e) => {
         const value = e.target.value;
         // Allow only numbers and restrict length to 10
@@ -73,7 +82,7 @@ function Signup() {
   };
 
     return (
-        <motion.div initial={{x:"-100vw"}} animate={{x:0}} className="flex flex-col items-center justify-start">
+        <motion.div variants={signInVariants} initial="initial" animate="final" className="flex flex-col items-center justify-start">
             <div className="flex scale-75 flex-wrap items-start justify-evenly min-h-screen pt-4 gap-8 dark:bg-blue-100 dark:bg-lightBG">
                 <div className="flex flex-col md:flex-row bg-gradient-to-b from-bgColor to-[#301F0A] dark:from-white dark:to-orange-100 w-[90%] mb-16 border-textColor1 border-[5px] rounded-3xl overflow-auto dark:bg-white">
                     <div className="flex flex-col sm:w-1/2 justify-start p-8 text-textColor1">
