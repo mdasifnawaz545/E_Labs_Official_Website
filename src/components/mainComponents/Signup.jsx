@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { ImProfile } from "react-icons/im"
-import {fbhandleGithubSignIn, fbhandleGoogleSignIn} from "../subComponents/firebase";
+import { fbhandleGithubSignIn, fbhandleGoogleSignIn } from "../subComponents/firebase";
 import { motion } from "framer-motion";
 function Signup() {
     const [email, setEmail] = useState("");
@@ -14,14 +14,28 @@ function Signup() {
     const [githubLoading, setGithubLoading] = useState(false); // New state for GitHub loading
     const [error, setError] = useState(null);
 
-const signInVariants={
-    initial:{
-        x:"-100vw"
-    },
-    final:{
-        x:0
+    const signInVariants = {
+        initial: {
+            x: "-100vw"
+        },
+        final: {
+            x: 0,
+            transition:{
+                when:"beforeChildren"
+            }
+        }
     }
-}
+
+    const childButtonVaraints = {
+        initial: {
+            x: "100vw"
+        },
+        final: {
+            x: 0,
+           
+        },
+    
+    }
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -54,32 +68,32 @@ const signInVariants={
     };
 
     const handleGoogleSignIn = async () => {
-      setGoogleLoading(true);
-      try {
-          await fbhandleGoogleSignIn({ setGoogleLoading, setError });
-          // console.log("Signed in with Google");
-          // Handle successful sign-in (redirect or update UI)
-      } catch (error) {
-          // console.error("Google sign-in failed:", error);
-          setError("Google Sign-In failed. Please try again.");
-      } finally {
-          setGoogleLoading(false);
-      }
-  };
+        setGoogleLoading(true);
+        try {
+            await fbhandleGoogleSignIn({ setGoogleLoading, setError });
+            // console.log("Signed in with Google");
+            // Handle successful sign-in (redirect or update UI)
+        } catch (error) {
+            // console.error("Google sign-in failed:", error);
+            setError("Google Sign-In failed. Please try again.");
+        } finally {
+            setGoogleLoading(false);
+        }
+    };
 
     const handleGitHubSignIn = async () => {
-      setGithubLoading(true);
-      try {
-          await fbhandleGithubSignIn({ setGithubLoading, setError });
-          // console.log("Signed in with GitHub");
-          // Handle successful sign-in (redirect or update UI)
-      } catch (error) {
-          // console.error("GitHub sign-in failed:", error);
-          setError("GitHub Sign-In failed. Please try again.");
-      } finally {
-          setGithubLoading(false);
-      }
-  };
+        setGithubLoading(true);
+        try {
+            await fbhandleGithubSignIn({ setGithubLoading, setError });
+            // console.log("Signed in with GitHub");
+            // Handle successful sign-in (redirect or update UI)
+        } catch (error) {
+            // console.error("GitHub sign-in failed:", error);
+            setError("GitHub Sign-In failed. Please try again.");
+        } finally {
+            setGithubLoading(false);
+        }
+    };
 
     return (
         <motion.div variants={signInVariants} initial="initial" animate="final" className="flex flex-col items-center justify-start">
@@ -186,12 +200,14 @@ const signInVariants={
                         <h1 className="md:text-4xl text-2xl font-extrabold mb-8">
                             ALREADY HAVE AN ACCOUNT?
                         </h1>
-                        <a
+                        <motion.a
+                            variants={childButtonVaraints}
+
                             href="/login"
                             className="flex justify-center bg-black text-textColor1 px-5 py-4 w-3/4 rounded-md border-2-textColor1 text-lg md:text-2xl font-extrabold hover:scale-105 hover:shadow-sm focus:scale-105 focus:outline-none"
                         >
                             LOG IN
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
             </div>
