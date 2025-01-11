@@ -18,7 +18,7 @@ function Materials() {
 
   return (
     <div className="w-full h-full flex items-center justify-center pb-[460px] sm:pb-0">
-      <div className="rounded-[32px] m-[4%] bg-[#0B1215] w-[80%] h-fit">
+      <div className="rounded-[32px] m-[4%] bg-[#0B1215] dark:bg-[#ffd4b3] w-[80%] h-fit">
         <div
           className="text-center font-bold leading-normal pb-[1%] pt-[3%] text-[180%] text-[#F7941D]"
           style={{
@@ -42,7 +42,7 @@ function Materials() {
             domain.resUrls.map((element, index) => (
               <a href={`/courses/${sec}/${index}`} key={element.name}>
                 <div
-                  className="flex flex-col items-center pt-0 pb-[21px] px-[20%] rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215]"
+                  className="flex flex-col items-center pt-0 pb-[21px] px-[20%] rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215] dark:bg-[#ffd4b3]"
                   style={{
                     borderColor: "var(--Border-Gradient, #F7941D)",
                     backgroundColor: "var(--Background-Color, #0B1215)",
