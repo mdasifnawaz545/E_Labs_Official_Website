@@ -11,6 +11,7 @@ import { auth } from "../subComponents/firebase"; // Adjust the path as necessar
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth"; // Ensure you import signOut
 
+
 const navLinks = [
   { href: "#home", label: "Home", route: "/" },
   { href: "#aboutPage", label: "About", route: "/about" },
@@ -18,6 +19,8 @@ const navLinks = [
   { href: "#membersPage", label: "Members", route: "/members" },
   { href: "#galleryPage", label: "Gallery", route: "/gallery" },
   { href: "#feedbackPage", label: "Feedback", route: "/feedback" },
+  { href: "#domain", label: "Feedback", route: "" },
+  
 ];
 
 const Navbar = () => {
@@ -114,7 +117,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full py px-4 z-50 dark:bg-blue-100 sticky top-0 flex flex-row items-center justify-between backdrop-blur-3xl rounded-b-2xl overflow-hidden">
+      <nav className="w-full py px-4 z-50 dark:bg-blue-100 sticky top-0 flex flex-row items-center justify-between backdrop-blur-3xl overflow-hidden">
         <div className="border border-textColor1 rounded-lg backdrop-blur-lg my-2 left-4">
           <Link to="/#home">
             <img src={logo} alt="logo" width={48} />
