@@ -46,172 +46,176 @@ const initialState = {
         "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Soumyadeep Kundu",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "I've found the classes offered by this society to be outstanding, surpassing those of any other society I've encountered.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Naser Ahmed",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "Of all the societies I've taken classes with, this one offers the most impressive and valuable learning experiences.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Mohammad Danyaal",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "The classes provided by this society are undoubtedly the best I've experienced across all the societies I've engaged with.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Md Waliullah",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "Without a doubt, the classes offered by this society are superior, I've encountered within the social organizations I've participated in.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Saumyajit Chatterjee",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "The classes offered by this society are truly exceptional and stand out amongst all the other societies I've had the privilege of learning from.",
     },
   ],
   sliders: [
     {
-      eventName: "Event 1",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+        
       ],
     },
     {
-      eventName: "Event 2",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+      
       ],
     },
     {
-      eventName: "Event 3",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
       ],
     },
     {
-      eventName: "Event 3",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-        },
-
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
         {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        
       ],
     },
     {
-      eventName: "Event 4",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+      
       ],
     },
     {
-      eventName: "Event 5",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
 
         {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
         {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
+
       ],
     },
   ],
   galleryImages: [
     {
-      url: "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721692800&semt=ais_user",
-      eventName: "Event 1",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-      eventName: "Event 2",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-      eventName: "Event 3",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+      eventName: "",
     },
     {
-      url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-      eventName: "Event 4",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
-      eventName: "Event 5",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
-      eventName: "Event 6",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8da03650_pbmaec.jpg",
+      eventName: "",
     },
     {
-      url: "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721692800&semt=ais_user",
-      eventName: "Event 7",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_c48ffe37_nsf9mx.jpg",
+      eventName: "",
     },
     {
-      url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-      eventName: "Event 8",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-      eventName: "Event 9",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
-    {
-      url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-      eventName: "Event 10",
-    },
-    {
-      url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
-      eventName: "Event 11",
-    },
-    {
-      url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
-      eventName: "Event 12",
-    },
+    // {
+    //   url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+    //   eventName: "Event 10",
+    // },
+    // {
+    //   url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
+    //   eventName: "Event 11",
+    // },
+    // {
+    //   url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
+    //   eventName: "Event 12",
+    // },
   ],
   studyMaterials: [
     {
@@ -278,17 +282,7 @@ const initialState = {
         },
       ],
     },
-    {
-      domain: "CLOUD COMPUTING",
-      img: "/Images/std_mt/cloud.png",
-      sec: "cloud",
-      resUrls: [
-        {
-          name: "",
-          url: "",
-        },
-      ],
-    },
+   
     {
       domain: "IoT & EMBEDDED",
       img: "/Images/std_mt/iot.png",
@@ -300,6 +294,119 @@ const initialState = {
         },
       ],
     },
+    {
+      domain: "ANDROID DEVELOPMENT",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "GRAPHIC DESIGNING",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+
+
+    {
+      domain: "PHOTOGRAPGY & VIDEO-EDITING",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "GAME DEVELOPMENT",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CONTENT WRITING",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "MARKETING & PR",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CLOUD COMPUTING (NEW)",
+      img: "/Images/std_mt/cloud.png",
+      sec: "cloud",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CYBER SECURITY (NEW)",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "DATA ANALYTICS (NEW)",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "COMING SOON...",
+      img: "/Images/std_mt/iot.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    
   ],
 };
 
