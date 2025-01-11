@@ -117,7 +117,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full py-6 px-4 z-50 dark:bg-blue-100 sticky top-0 flex items-center justify-center backdrop-blur-3xl">
+            <nav className="w-full py-6 px-4 z-50 sticky top-0 flex items-center justify-center backdrop-blur-3xl">
                 <div className="border border-textColor1 rounded-lg backdrop-blur-lg fixed my-2 left-4">
                     <Link to="/#home">
                         <img src={logo} alt="logo" width={48} />
