@@ -17,7 +17,7 @@ function Domain() {
                 "linear-gradient(180deg, #F7941D -348.21%, #915711 0.22%)",
             }}
           ></div>
-      <div className="rounded-[32px] border-[3px] border-[#F7941D] m-[4%] bg-[#0B1215] w-[90%] h-[1380px]">
+      <div className="rounded-[32px] border-[3px] border-[#F7941D] m-[4%] bg-[#0B1215] dark:bg-[#ffd4b3] w-[90%] h-[1380px]">
         {/* <div
           className="text-center font-bold leading-normal pb-[1%] pt-[3%] text-[180%] text-[#F7941D]"
           style={{
