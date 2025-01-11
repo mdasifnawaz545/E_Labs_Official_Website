@@ -19,7 +19,7 @@ function FirstPage() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center flex-grow '>
+    <div className='flex flex-col items-center justify-center flex-grow dark:bg-[radial-gradient(circle_at_center,#fff_10%,#ffedde_30%,#ffd4b3_80%)]'>
       <div className='flex scale-95 flex-col items-center justify-center  gap-6'>
         <motion.figure variants={firstVariant} initial="initial" animate="final" transition="transition">
           <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />
@@ -30,7 +30,7 @@ function FirstPage() {
             Peer-to-Peer Learning at <span className='text-5xl text-center font-black break-inside-avoid whitespace-nowrap'>E Labs</span>
           </motion.h2>
         </div>
-        <p className='text-textColor2 max-w-96 text-center'>
+        <p className='text-textColor2 dark:text-black max-w-96 text-center'>
           Join us as we foster a community-driven approach to knowledge.
         </p>
         <IconButton userClass='animate-bounce' buttonName='KNOW MORE' imageSource="../Images/next.png" />
