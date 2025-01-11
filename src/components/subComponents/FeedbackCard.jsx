@@ -3,7 +3,7 @@ import React from 'react'
 function FeedbackCard({name,feedback,imgSource="https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg"}) {
   return (
     <div className='flex flex-col w-72 h-52 items-center justify-between p-4 rounded-br-3xl border border-textColor1'>
-      <p className='text-textColor2 '>{feedback}</p>
+      <p className='text-textColor2 dark:text-black '>{feedback}</p>
       <div className='w-full flex items-center justify-end gap-2'>
         <figure>
           <img 
