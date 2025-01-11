@@ -132,7 +132,7 @@ const Navbar = () => {
               aria-label={isMenuOpen ? "Close Menu" : "Open Menu"} // Add accessibility
             />
           </div>
-          <div className="md:flex hidden">
+          {/* <div className="md:flex hidden">
             {user ? (
               <>
                 <Link to={`/user/${user.uid}`}>
@@ -147,7 +147,7 @@ const Navbar = () => {
                 <Button buttonName="SIGN UP" />
               </Link>
             )}
-          </div>
+          </div> */}
         </div>
       </nav>
 

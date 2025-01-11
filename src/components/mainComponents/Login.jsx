@@ -55,8 +55,21 @@ function Login() {
             x: "100vw"
         },
         final: {
+            x: 0,
+            transition: {
+                when: "beforeChildren",
+            }
+        }
+    }
+
+    const childVarient = {
+        initial: {
+            x: "-100vw"
+        },
+        final: {
             x: 0
         }
+
     }
 
     const handleGitHubSignIn = async () => {
@@ -163,12 +176,13 @@ function Login() {
                             Sign up and discover a great amount of new
                             opportunities and endless access to resources!
                         </p>
-                        <a
+                        <motion.a
+                            variants={childVarient}
                             href="/signup"
                             className="flex justify-center bg-black text-textColor1 px-5 py-4 w-3/4 rounded-md border-2-textColor1 text-lg md:text-2xl font-medium hover:scale-105 hover:shadow-sm focus:scale-105 focus:outline-none"
                         >
                             SIGN UP
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ function Member() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
   };
   let memberDetails = useSelector((state) => state.memberDetails);
@@ -20,7 +20,7 @@ function Member() {
       </h1>
       <Slider
         {...settings}
-        className="flex flex-wrap justify-evenly items-center text-center w-[85%] px-0"
+        className="flex flex-wrap justify-center items-center text-center w-[85%] px-0"
       >
         {memberDetails.map((el) => (
           <div className="w-full flex items-center justify-center">

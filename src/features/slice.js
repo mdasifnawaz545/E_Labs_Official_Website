@@ -46,29 +46,29 @@ const initialState = {
         "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Soumyadeep Kundu",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "I've found the classes offered by this society to be outstanding, surpassing those of any other society I've encountered.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Naser Ahmed",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "Of all the societies I've taken classes with, this one offers the most impressive and valuable learning experiences.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Mohammad Danyaal",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "The classes provided by this society are undoubtedly the best I've experienced across all the societies I've engaged with.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Md Waliullah",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "Without a doubt, the classes offered by this society are superior, I've encountered within the social organizations I've participated in.",
     },
     {
-      name: "Md Asif Nawaz",
+      name: "Saumyajit Chatterjee",
       feedback:
-        "The Classes offered by this society is amazing and one of the best among all the society whomever i had taken the class.",
+        "The classes offered by this society are truly exceptional and stand out amongst all the other societies I've had the privilege of learning from.",
     },
   ],
   sliders: [

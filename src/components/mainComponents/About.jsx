@@ -3,10 +3,7 @@ import Card from '../subComponents/Card'
 import HPCard from '../subComponents/HPCard'
 
 function About() {
-  let desc=`fficia doloremque voluptates veritatis, beatae non deleniti pariatur nulla perspiciatis laborum reiciendis odio quam totam fugiat quae? Facilis magni aut rerum! Iure earum recusandae corporis sed.
-      Earum vitae libero omnis expedita dolorum cupiditate repellendus deserunt ad adipisci aspernatur non harum delectus ducimus corporis, suscipit ratione. Animi rerum blanditiis reiciendis impedit sed modi quisquam, tempore explicabo numquam?
-      Aut tempore eaque adipisci, autem veritatis modi alias praesentium. Nulla error dolorum possimus! Excepturi dolorem eaque totam nihil iusto officia dolor nisi pariatur laborum, iure laboriosam voluptate in, tempore deleniti?
-      tempora facilis saepe officiis dicta officia praesentium unde rem ullam sequi eius vitae totam quas eveniet. Eos!`
+  let desc=`E-Labs is a student-run peer-to-peer technical engagement platform designed to empower learners. We go beyond the confines of traditional academic curricula, offering a diverse range of courses and projects that cater to your unique interests and professional aspirations. Our platform provides a dynamic and collaborative learning environment where you can connect with fellow students, share knowledge, and work together on challenging projects. By actively engaging with your peers, you gain valuable real-world experience, develop essential soft skills, and bridge the critical gap between theoretical knowledge and the ever-evolving demands of the professional world. At E-Labs, we believe in the power of collaborative learning and mentorship to foster innovation, creativity, and personal growth. Join us on this exciting journey of discovery and unlock your full potential.`
   return (
     
         

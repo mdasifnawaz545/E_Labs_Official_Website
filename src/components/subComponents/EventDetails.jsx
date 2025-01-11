@@ -4,7 +4,7 @@ import EventCard from "../subComponents/EventCard";
 
 function EventDetails({ eventInfo }) {
   return (
-    <div className="flex justify-evenly flex-wrap-reverse gap-12 items-center">
+    <div className="md:flex scale-80 justify-evenly flex-wrap-reverse gap-12 items-center">
       <HPCard
         userClass="text-3xl text-wrap"
         heading={eventInfo.name || `Event ${eventInfo.id}`}

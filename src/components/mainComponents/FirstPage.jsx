@@ -14,7 +14,7 @@ function FirstPage() {
     final: { y: 0,
       },
       transition:{
-        delay:0,duration:3,type:"spring",stiffness:200
+        delay:0,duration:5,type:"spring",stiffness:200
     } 
   }
 
@@ -25,7 +25,7 @@ function FirstPage() {
           <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png" width={256} alt="" />
         </motion.figure>
         <div className="heading flex items-center justify-center flex-col gap-2">
-          <motion.h1 animate={{ rotateZ: 360 }} className='text-textColor1 text-center font-black text-5xl '>Empowering through Collaboration:</motion.h1>
+          <motion.h1 animate={{ left:0 }} className='text-textColor1 text-center font-black text-5xl '>Empowering through Collaboration:</motion.h1>
           <motion.h2 animate={{ scale: 1.2 }} className='text-textColor1 text-center font-black text-3xl' >
             Peer-to-Peer Learning at <span className='text-5xl text-center font-black break-inside-avoid whitespace-nowrap'>E Labs</span>
           </motion.h2>
