@@ -19,7 +19,7 @@ function PdfView() {
   }, [sec]);
   return (
     <div className="w-full h-full flex items-center justify-center pb-[460px] sm:pb-0">
-      <div className="rounded-[32px] m-[4%] bg-[#0B1215] w-[80%] h-fit">
+      <div className="rounded-[32px] m-[4%] bg-[#0B1215] dark:bg-[#ffd4b3] w-[80%] h-fit">
         <div
           className="text-center font-bold leading-normal pb-[1%] pt-[3%] text-[180%] text-[#F7941D]"
           style={{
