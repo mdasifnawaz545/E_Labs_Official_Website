@@ -15,11 +15,11 @@ import { signOut } from "firebase/auth"; // Ensure you import signOut
 const navLinks = [
   { href: "#home", label: "Home", route: "/" },
   { href: "#aboutPage", label: "About", route: "/about" },
-  { href: "#eventPage", label: "Events", route: "/events" },
-  { href: "#membersPage", label: "Members", route: "/members" },
+  { href: "#domain", label: "Domain", route: "" },
+  // { href: "#eventPage", label: "Events", route: "/events" },
+  // { href: "#membersPage", label: "Members", route: "/members" },
   { href: "#galleryPage", label: "Gallery", route: "/gallery" },
   { href: "#feedbackPage", label: "Feedback", route: "/feedback" },
-  { href: "#domain", label: "Domain", route: "" },
   
 ];
 
