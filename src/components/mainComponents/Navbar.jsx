@@ -19,7 +19,7 @@ const navLinks = [
   { href: "#membersPage", label: "Members", route: "/members" },
   { href: "#galleryPage", label: "Gallery", route: "/gallery" },
   { href: "#feedbackPage", label: "Feedback", route: "/feedback" },
-  { href: "#domain", label: "Feedback", route: "" },
+  { href: "#domain", label: "Domain", route: "" },
   
 ];
 
