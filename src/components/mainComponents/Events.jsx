@@ -21,14 +21,13 @@ function Events() {
       </h1>
       <Slider
         {...settings}
-        className="flex items-center justify-center w-[85%] px-0"
+        className="flex items-center justify-center w-[90%] px-0"
       >
         {events.map((el) => (
           <div className="w-full flex flex-wrap-reverse items-start justify-evenly">
             <EventDetails eventInfo={el} />
           </div>
         ))}
-
       </Slider>
     </div>
   );
