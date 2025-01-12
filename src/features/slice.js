@@ -220,7 +220,7 @@ const initialState = {
   studyMaterials: [
     {
       domain: "WEB DEVELOPMENT",
-      img: "/Images/std_mt/webdev.png",
+      img: "/Images/Logo/WebDevelopment.png",
       sec: "webdev",
       resUrls: [
         {
@@ -251,7 +251,7 @@ const initialState = {
     },
     {
       domain: "AI/ML",
-      img: "/Images/std_mt/aiml.png",
+      img: "/Images/Logo/AIML.png",
       sec: "aiml",
       resUrls: [
         {
@@ -262,7 +262,7 @@ const initialState = {
     },
     {
       domain: "JAVA",
-      img: "/Images/std_mt/java.png",
+      img: "/Images/Logo/Java.png",
       sec: "java",
       resUrls: [
         {
@@ -273,7 +273,7 @@ const initialState = {
     },
     {
       domain: "UI / UX",
-      img: "/Images/std_mt/uiux.png",
+      img: "/Images/Logo/UIUX.png",
       sec: "uiux",
       resUrls: [
         {
@@ -285,7 +285,7 @@ const initialState = {
    
     {
       domain: "IoT & EMBEDDED",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/IoT&Embedded.png",
       sec: "iot",
       resUrls: [
         {
@@ -296,7 +296,7 @@ const initialState = {
     },
     {
       domain: "ANDROID DEVELOPMENT",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/AppDevelopment.png",
       sec: "iot",
       resUrls: [
         {
@@ -307,7 +307,7 @@ const initialState = {
     },
     {
       domain: "GRAPHIC DESIGNING",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/GD.png",
       sec: "iot",
       resUrls: [
         {
@@ -320,7 +320,7 @@ const initialState = {
 
     {
       domain: "PHOTOGRAPGY & VIDEO-EDITING",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/PhotoVideoEditing.png",
       sec: "iot",
       resUrls: [
         {
@@ -331,7 +331,7 @@ const initialState = {
     },
     {
       domain: "GAME DEVELOPMENT",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/GD.png",
       sec: "iot",
       resUrls: [
         {
@@ -342,7 +342,7 @@ const initialState = {
     },
     {
       domain: "CONTENT WRITING",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/ContentWriting.png",
       sec: "iot",
       resUrls: [
         {
@@ -353,7 +353,7 @@ const initialState = {
     },
     {
       domain: "MARKETING & PR",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/Marketing.png",
       sec: "iot",
       resUrls: [
         {
@@ -364,7 +364,7 @@ const initialState = {
     },
     {
       domain: "CLOUD COMPUTING (NEW)",
-      img: "/Images/std_mt/cloud.png",
+      img: "/Images/Logo/CloudComputing.png",
       sec: "cloud",
       resUrls: [
         {
@@ -375,7 +375,7 @@ const initialState = {
     },
     {
       domain: "CYBER SECURITY (NEW)",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/CyberSecurity.png",
       sec: "iot",
       resUrls: [
         {
@@ -386,7 +386,7 @@ const initialState = {
     },
     {
       domain: "DATA ANALYTICS (NEW)",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/DataAnalytics.png",
       sec: "iot",
       resUrls: [
         {
@@ -397,7 +397,7 @@ const initialState = {
     },
     {
       domain: "COMING SOON...",
-      img: "/Images/std_mt/iot.png",
+      img: "/Images/Logo/comingsoon.png",
       sec: "iot",
       resUrls: [
         {

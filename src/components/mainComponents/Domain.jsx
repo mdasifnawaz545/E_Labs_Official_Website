@@ -40,7 +40,7 @@ function Domain() {
           {stdmt.map((element) => (
             <a href={`/courses/${element.sec}`}>
               <div
-                className="flex hover:scale-105 duration-300 font-verna  flex-col items-center pt-0 pb-[21px] px-[34px] rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215] h-48"
+                className="flex hover:scale-105 duration-300 font-verna  flex-col items-center pt-0 pb-[21px] px-[34px] rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215] h-52"
                 style={{
                   borderColor: "var(--Border-Gradient, #F7941D)",
                   backgroundColor: "var(--Background-Color, #0B1215)",
