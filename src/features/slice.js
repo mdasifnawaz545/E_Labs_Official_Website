@@ -73,150 +73,154 @@ const initialState = {
   ],
   sliders: [
     {
-      eventName: "Event 1",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+        
       ],
     },
     {
-      eventName: "Event 2",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+      
       ],
     },
     {
-      eventName: "Event 3",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
       ],
     },
     {
-      eventName: "Event 3",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-        },
-
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
         {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+        },
+        
       ],
     },
     {
-      eventName: "Event 4",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
         },
 
-        {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-        },
-        {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-        },
+      
       ],
     },
     {
-      eventName: "Event 5",
+      eventName: "",
       images: [
         {
-          url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
 
         {
-          url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
         {
-          url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+          url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
+
       ],
     },
   ],
   galleryImages: [
     {
-      url: "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721692800&semt=ais_user",
-      eventName: "Event 1",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-      eventName: "Event 2",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-      eventName: "Event 3",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
+      eventName: "",
     },
     {
-      url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-      eventName: "Event 4",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
-      eventName: "Event 5",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
-      eventName: "Event 6",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8da03650_pbmaec.jpg",
+      eventName: "",
     },
     {
-      url: "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721692800&semt=ais_user",
-      eventName: "Event 7",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_c48ffe37_nsf9mx.jpg",
+      eventName: "",
     },
     {
-      url: "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
-      eventName: "Event 8",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
     {
-      url: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
-      eventName: "Event 9",
+      url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
+      eventName: "",
     },
-    {
-      url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-      eventName: "Event 10",
-    },
-    {
-      url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
-      eventName: "Event 11",
-    },
-    {
-      url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
-      eventName: "Event 12",
-    },
+    // {
+    //   url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+    //   eventName: "Event 10",
+    // },
+    // {
+    //   url: "https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg",
+    //   eventName: "Event 11",
+    // },
+    // {
+    //   url: "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
+    //   eventName: "Event 12",
+    // },
   ],
   studyMaterials: [
     {
       domain: "WEB DEVELOPMENT",
-      img: "/Images/std_mt/webdev.png",
+      img: "/Images/Logo/WebDevelopment.png",
       sec: "webdev",
       resUrls: [
         {
@@ -247,7 +251,7 @@ const initialState = {
     },
     {
       domain: "AI/ML",
-      img: "/Images/std_mt/aiml.png",
+      img: "/Images/Logo/AIML.png",
       sec: "aiml",
       resUrls: [
         {
@@ -258,7 +262,7 @@ const initialState = {
     },
     {
       domain: "JAVA",
-      img: "/Images/std_mt/java.png",
+      img: "/Images/Logo/Java.png",
       sec: "java",
       resUrls: [
         {
@@ -269,7 +273,7 @@ const initialState = {
     },
     {
       domain: "UI / UX",
-      img: "/Images/std_mt/uiux.png",
+      img: "/Images/Logo/UIUX.png",
       sec: "uiux",
       resUrls: [
         {
@@ -278,9 +282,89 @@ const initialState = {
         },
       ],
     },
+   
     {
-      domain: "CLOUD COMPUTING",
-      img: "/Images/std_mt/cloud.png",
+      domain: "IoT & EMBEDDED",
+      img: "/Images/Logo/IoT&Embedded.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "ANDROID DEVELOPMENT",
+      img: "/Images/Logo/AppDevelopment.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "GRAPHIC DESIGNING",
+      img: "/Images/Logo/GD.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+
+
+    {
+      domain: "PHOTOGRAPGY & VIDEO-EDITING",
+      img: "/Images/Logo/PhotoVideoEditing.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "GAME DEVELOPMENT",
+      img: "/Images/Logo/GD.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CONTENT WRITING",
+      img: "/Images/Logo/ContentWriting.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "MARKETING & PR",
+      img: "/Images/Logo/Marketing.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "CLOUD COMPUTING (NEW)",
+      img: "/Images/Logo/CloudComputing.png",
       sec: "cloud",
       resUrls: [
         {
@@ -290,8 +374,8 @@ const initialState = {
       ],
     },
     {
-      domain: "IoT & EMBEDDED",
-      img: "/Images/std_mt/iot.png",
+      domain: "CYBER SECURITY (NEW)",
+      img: "/Images/Logo/CyberSecurity.png",
       sec: "iot",
       resUrls: [
         {
@@ -300,6 +384,29 @@ const initialState = {
         },
       ],
     },
+    {
+      domain: "DATA ANALYTICS (NEW)",
+      img: "/Images/Logo/DataAnalytics.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    {
+      domain: "COMING SOON...",
+      img: "/Images/Logo/comingsoon.png",
+      sec: "iot",
+      resUrls: [
+        {
+          name: "",
+          url: "",
+        },
+      ],
+    },
+    
   ],
 };
 

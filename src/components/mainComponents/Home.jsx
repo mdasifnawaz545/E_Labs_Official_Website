@@ -7,6 +7,7 @@ import Member from "./Member";
 import Feedback from "./Feedback";
 import Gallery from "./Gallery";
 import Members from "./Members";
+import Domain from "./Domain";
 
 function Home() {
   return (
@@ -20,12 +21,15 @@ function Home() {
       <section id="aboutPage">
         <About />
       </section>
-      <section id="eventPage">
+      <section id="domain">
+        <Domain />
+      </section>
+      {/* <section id="eventPage">
         <Events />
       </section>
       <section id="membersPage">
         <Member />
-      </section>
+      </section> */}
       <section id="galleryPage">
         <Gallery />
       </section>
