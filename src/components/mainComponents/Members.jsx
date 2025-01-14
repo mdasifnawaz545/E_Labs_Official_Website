@@ -19,7 +19,7 @@ function Members() {
     <div className='flex flex-col items-center justify-center text-center mt-12'>
 
       <h1 className='text-5xl font-black mb-8 text-textColor1 '>MEET OUR TEAM</h1>
-      <Slider {...settings} className='flex items-center justify-center w-[85%] px-0' >
+      <Slider {...settings} className='flex items-center justify-center w-[85%] px-0 ' >
         {
           events.map((el) => (
             <div className='w-full flex flex-wrap-reverse items-start justify-evenly'>

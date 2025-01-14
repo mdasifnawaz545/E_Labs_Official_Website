@@ -7,7 +7,7 @@ function About() {
   return (
     
         
-      <div className='flex flex-wrap items-center justify-evenly mt-4 min-h-screen gap-8'>
+      <div className='flex flex-wrap items-center justify-evenly pt-4 min-h-screen gap-8 dark:bg-[radial-gradient(circle_at_center,#fff_1%,#ffedde_20%,#ffd4b3_60%)]'>
           <Card />
           <HPCard heading='E - Labs'  userClass='text-6xl font-black' description={desc}/>
         </div>
