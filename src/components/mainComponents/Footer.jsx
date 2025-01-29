@@ -5,8 +5,8 @@ import Social from "../subComponents/Social";
 
 function Footer() {
   return (
-    <div className="backdrop-blur-lg dark:backdrop-blur-lg dark:bg-blue-100 rounded-t-2xl bottom-0 w-full min-h-64 gap-1 max-[467px]:gap-4 flex flex-col flex-wrap items-center justify-evenly border-t-2 border-textColor1">
-      <div className="flex flex-wrap w-full items-center justify-evenly">
+    <div className='backdrop-blur-lg dark:backdrop-blur-lg dark:bg-[#ffd4b3]  rounded-t-md bottom-0 w-full min-h-64 gap-1 max-[467px]:gap-4 flex flex-col flex-wrap items-center justify-evenly border-x border-t border-textColor1'>
+      <div className='flex flex-wrap w-full items-center justify-evenly'>
         <figure>
           <img
             src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1719200986/Trasnparent12_1_d7siyr.png"
@@ -32,8 +32,7 @@ Odisha India 751024`,
           />
         </div>
       </div>
-      <div className=" select-none flex gap-1 flex-col font-extralight items-center justify-center text-textColor2 tracking-widest text-xs mb-2">
-        <p>&copy;2024. All Rights are Reserved by ELABS</p>
+      <div className=' select-none flex gap-1 flex-col font-extralight items-center justify-center text-textColor2 dark:text-black  tracking-widest text-xs mb-2'><p>&copy;2024. All Rights are Reserved by ELABS</p>
         <p>Made By Web Development Team</p>
       </div>
     </div>

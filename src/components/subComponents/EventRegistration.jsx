@@ -36,41 +36,41 @@ function EventRegistration() {
   return (
     <div className='flex flex-wrap-reverse items-center justify-between px-8'>
       <div className="flex-auto max-w-md mx-auto mb-4 mt-8 shadow appearance-none border-textColor1 border-2 rounded-md">
-        <h2 className="text-2xl font-bold mb-4 p-6">Register for {eventName}</h2>
+        <h2 className="text-2xl font-bold mb-4 p-6 dark:text-black ">Register for {eventName}</h2>
         <form onSubmit={handleSubmit} className='px-6'>
           <div className="mb-4">
-            <label htmlFor="name" className="block mb-2 text-white">Name*</label>
+            <label htmlFor="name" className="block mb-2 text-white dark:text-black ">Name*</label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-black text-white"
+              className="w-full px-3 py-2 border rounded bg-black dark:bg-sky-100  text-white dark:text-black "
               required
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block mb-2 text-white">KIIT Email*</label>
+            <label htmlFor="email" className="block mb-2 text-white dark:text-black ">KIIT Email*</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-black text-white"
+              className="w-full px-3 py-2 border rounded bg-black dark:bg-sky-100  text-white dark:text-black "
               required
               pattern=".+@kiit\.ac\.in$"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="year" className="block mb-2 text-white">Year*</label>
+            <label htmlFor="year" className="block mb-2 text-white dark:text-black ">Year*</label>
             <select
               id="year"
               name="year"
               value={formData.year}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-black text-white"
+              className="w-full px-3 py-2 border rounded bg-black dark:bg-sky-100  text-white dark:text-black "
               required
             >
               <option value="">Select Year</option>
@@ -82,26 +82,26 @@ function EventRegistration() {
             </select>
           </div>
           <div className="mb-4">
-            <label htmlFor="rollNumber" className="block mb-2 text-white">Roll Number*</label>
+            <label htmlFor="rollNumber" className="block mb-2 text-white dark:text-black ">Roll Number*</label>
             <input
               type="text"
               id="rollNumber"
               name="rollNumber"
               value={formData.rollNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-black text-white"
+              className="w-full px-3 py-2 border rounded bg-black dark:bg-sky-100  text-white dark:text-black "
               required
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="contactNumber" className="block mb-2 text-white">WhatsApp/Contact Number*</label>
+            <label htmlFor="contactNumber" className="block mb-2 text-white dark:text-black ">WhatsApp/Contact Number*</label>
             <input
               type="tel"
               id="contactNumber"
               name="contactNumber"
               value={formData.contactNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-black text-white"
+              className="w-full px-3 py-2 border rounded bg-black dark:bg-sky-100  text-white dark:text-black "
               required
             />
           </div>

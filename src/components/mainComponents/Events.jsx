@@ -15,7 +15,7 @@ function Events() {
   };
   let events = useSelector((state) => state.eventDetails);
   return (
-    <div className="flex flex-col items-center justify-center text-center mt-12 pt-20">
+    <div className="flex flex-col items-center justify-center text-center  pt-32 dark:bg-[radial-gradient(circle_at_center,#fff_1%,#ffedde_20%,#ffd4b3_50%)]">
       <h1 className="text-5xl font-black mb-8 text-textColor1 ">
         UPCOMING EVENTS
       </h1>

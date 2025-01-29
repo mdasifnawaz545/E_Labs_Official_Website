@@ -8,7 +8,7 @@ function HPCard({ heading = '', subHeading = '', description = '', userClass = '
                 <h3 className='text-textColor1 text- font-thin text-sm'>{subHeading}</h3>
             </div>
             <div>
-                <p className='text-textColor2 max-w-[60ch] text-justify text-wrap'>{description}</p>
+                <p className='text-textColor2 dark:text-black max-w-[60ch] text-justify text-wrap'>{description}</p>
             </div>
 
         </div>
