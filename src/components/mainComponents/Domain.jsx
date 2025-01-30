@@ -6,8 +6,8 @@ function Domain() {
 
   return (
     <div className="w-full font-verna mt-12 h-full flex flex-col items-center justify-center">
-      <h1 className="text-4xl lg:text-5xl font-black mb-8 text-textColor1 ">
-        INTRODUCING OUR DOMAINS
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-textColor1 mx-3 text-center">
+        Introducing Our Domains
       </h1>
       <div
         className="w-[90%] h-[4px] bg-gradient-to-b from-[#F7941D] to-[#915711]"
@@ -17,7 +17,7 @@ function Domain() {
         }}
       ></div>
       <div className="rounded-[32px] border-[3px] border-[#F7941D] mt-[4%] bg-[#0B1215] dark:bg-[#ffd4b3] w-[90%] h-full flex flex-col items-center justify-evenly">
-        <div className="flex gap-4 items-center flex-wrap w-full justify-center px-3 py-10">
+        <div className="flex gap-7 px-4 items-center flex-wrap w-full justify-center py-10">
           {stdmt.map((element) => (
             <a
               href={`/courses/${element.sec}`}
@@ -25,7 +25,7 @@ function Domain() {
               key={element.domain}
             >
               <div
-                className="flex font-verna flex-col items-center justify-center rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215] h-52 gap-2.5 w-full"
+                className="flex font-verna flex-col items-center justify-center rounded-[15px] border-[4px] border-[#F7941D] bg-[#0B1215] h-52 gap-2.5 w-full p-3"
                 style={{
                   borderColor: "var(--Border-Gradient, #F7941D)",
                   backgroundColor: "var(--Background-Color, #0B1215)",

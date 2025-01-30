@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   eventDetails: [
     {
-      id:101,
+      id: 101,
       name: "Design of Development",
-      img:"https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
+      img: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
       venue: "Campus 12, Auditorium",
       date: "25-07-2024",
       shortDescription: "",
@@ -13,9 +13,9 @@ const initialState = {
         "Lorem ipsum to esse. Quia ab nulla consequatur minima consectetur eius culpa beatae adipisci. Veniam, numquam? Ipsa harum fuga, nemo tenetur modi ea repudiandae iure perspiciatis voluptas architecto deleniti iste.Magni quibusdam modi ipsam femo aperiam sunt aut quidem! Reprehenderit, rem quasi. Odit recusandae eveniet repudiandae quidem voluptatum minus aperiam eaepudiandae cum similique iure iste inventore? Laboriosam, nobis ea.",
     },
     {
-      id:201,
+      id: 201,
       name: "Web Development",
-      img:"https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
+      img: "https://thumbs.dreamstime.com/b/flower-sun-sunny-summer-day-91542486.jpg",
       venue: "Campus 12, Auditorium",
       date: "25-07-2024",
       shortDescription: "",
@@ -84,8 +84,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620500/WhatsApp_Image_2025-01-12_at_00.01.53_f7526a2a_ktjrix.jpg",
         },
-
-        
       ],
     },
     {
@@ -100,8 +98,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620490/WhatsApp_Image_2025-01-12_at_00.01.53_0241bbd5_cbsf2l.jpg",
         },
-
-      
       ],
     },
     {
@@ -116,7 +112,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
-
       ],
     },
     {
@@ -131,7 +126,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620487/WhatsApp_Image_2025-01-12_at_00.01.56_4f0953b6_t6pkda.jpg",
         },
-        
       ],
     },
     {
@@ -146,8 +140,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620488/WhatsApp_Image_2025-01-12_at_00.01.55_37c20ea0_zh4irm.jpg",
         },
-
-      
       ],
     },
     {
@@ -163,7 +155,6 @@ const initialState = {
         {
           url: "https://res.cloudinary.com/dpqdgcipi/image/upload/v1736620489/WhatsApp_Image_2025-01-12_at_00.01.54_8f4215e5_p5efl6.jpg",
         },
-
       ],
     },
   ],
@@ -282,7 +273,7 @@ const initialState = {
         },
       ],
     },
-   
+
     {
       domain: "IoT & EMBEDDED",
       img: "/Images/Logo/IoT&Embedded.png",
@@ -317,7 +308,6 @@ const initialState = {
       ],
     },
 
-
     {
       domain: "PHOTOGRAPGY & VIDEO-EDITING",
       img: "/Images/Logo/PhotoVideoEditing.png",
@@ -330,7 +320,7 @@ const initialState = {
       ],
     },
     {
-      domain: "GAME DEVELOPMENT",
+      domain: "GAME DEVELOPMENT & AR/VR",
       img: "/Images/Logo/GD.png",
       sec: "iot",
       resUrls: [
@@ -406,7 +396,6 @@ const initialState = {
         },
       ],
     },
-    
   ],
 };
 
