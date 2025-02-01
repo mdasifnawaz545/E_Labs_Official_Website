@@ -28,14 +28,14 @@ const initialState = {
     {
       name: "Md Asif Nawaz",
       position: "Asst.Lead Coordinator",
-      imgSrc:
-        "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
+      // imgSrc:
+      //   "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
     },
     {
       name: "Md Asif Nawaz",
       position: "Asst.Lead Coordinator",
-      imgSrc:
-        "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
+      // imgSrc:
+      //   "https://res.cloudinary.com/dpqdgcipi/image/upload/v1720237114/1676480037898_jypfgp.jpg",
     },
   ],
   theme: "dark",
