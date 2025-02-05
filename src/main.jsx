@@ -36,9 +36,6 @@ const route = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />}></Route>
       <Route path="about" element={<About />}></Route>
-      {/* <Route path="project" element={<Projects />}></Route> */}
-
-      {/* <Route path="/#aboutPage" element={<About />}></Route> */}
       <Route path="events" element={<Events />}></Route>
       <Route path="members" element={<Member />}></Route>
       <Route path="feedback" element={<Feedback />}></Route>
@@ -47,10 +44,6 @@ const route = createBrowserRouter(
       <Route path="courses" element={<StudyMt />}></Route>
       <Route path="courses/:sec" element={<Materials />}></Route>
       <Route path="courses/:sec/:pdf" element={<PdfView />}></Route>
-      <Route path="about" element={<About />}></Route>
-      {/* <Route path="project" element={<Projects />}></Route> */}
-
-      {/* <Route path="/#aboutPage" element={<About />}></Route> */}
       <Route path="events" element={<Events />}></Route>
       <Route path="register/:eventid" element={<EventRegistration />}></Route>
       <Route path="/submission-success" element={<SubmissionSuccess />} />
@@ -63,9 +56,6 @@ const route = createBrowserRouter(
       <Route path="addevent" element={<AddEvent />}></Route>
       <Route path="addmember" element={<AddMember />}></Route>
       <Route path="submitfeedback" element={<SubmitFeedback />}></Route>
-
-      {/* <Route path="project" element={<Project />}></Route> */}
-      {/* <Route path="gallery" element={<Gallery />}></Route> */}
     </Route>
   )
 );
