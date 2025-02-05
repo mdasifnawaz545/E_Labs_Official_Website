@@ -47,7 +47,6 @@ const route = createBrowserRouter(
       <Route path="courses" element={<StudyMt />}></Route>
       <Route path="courses/:sec" element={<Materials />}></Route>
       <Route path="courses/:sec/:pdf" element={<PdfView />}></Route>
-      <Route path="/" element={<Home />}></Route>
       <Route path="about" element={<About />}></Route>
       {/* <Route path="project" element={<Projects />}></Route> */}
 

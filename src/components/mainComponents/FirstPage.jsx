@@ -40,7 +40,7 @@ function FirstPage() {
             animate={{ left: 0 }}
             className="text-textColor1 text-center font-black text-5xl "
           >
-            Empowering through Collaboration
+            Empowering Through Collaboration
           </motion.h1>
           <motion.h2
             animate={{ scale: 1.2 }}
