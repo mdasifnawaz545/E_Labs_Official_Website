@@ -13,7 +13,6 @@ function FeedbackCard({
         <figure className="rounded-full dark:text-black">
           {/* <img className="rounded-full aspect-square object-cover" src={imgSource} alt="" width={24} height={24} /> */}
           <FaRegUser />
-
         </figure>
         <p className="text-end text-textColor1">{name}</p>
       </div>
