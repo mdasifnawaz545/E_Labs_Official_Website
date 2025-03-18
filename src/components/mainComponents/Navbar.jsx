@@ -7,9 +7,9 @@ import menu from "/Images/menu.svg";
 import close from "/Images/close.svg";
 import Button from "../subComponents/Button";
 import ImageButton from "../subComponents/ImageButton";
-import { auth } from "../subComponents/firebase"; // Adjust the path as necessary
-import { useAuthState } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth"; // Ensure you import signOut
+// import { auth } from "../subComponents/firebase"; // Adjust the path as necessary
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { signOut } from "firebase/auth"; // Ensure you import signOut
 
 
 const navLinks = [
@@ -24,7 +24,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [user] = useAuthState(auth); // Get the current user from context
+  // const [user] = useAuthState(auth); // Get the current user from context
   const [dark, setDark] = useState(true);
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,9 +80,9 @@ const Navbar = () => {
     setDark((prev) => !prev);
   };
 
-  const handleSignOut = async () => {
-    await signOut(auth); // Call the signOut method
-  };
+  // const handleSignOut = async () => {
+  //   await signOut(auth); // Call the signOut method
+  // };
 
   const renderNavLinks = (onClickHandler) =>
     navLinks.map(({ href, label, route }) => {
@@ -159,7 +159,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "hidden translate-x-full"
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full text-2xl space-y-8 dark:text-black">
+        {/* <div className="flex flex-col items-center justify-center h-full text-2xl space-y-8 dark:text-black">
           {renderNavLinks(closeMenu)}
           {user ? (
             <>
@@ -175,7 +175,7 @@ const Navbar = () => {
               <Button buttonName="SIGN UP" />
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );

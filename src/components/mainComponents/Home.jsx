@@ -26,10 +26,10 @@ function Home() {
       </section>
       {/* <section id="eventPage">
         <Events />
-      </section>
+      </section> */}
       <section id="membersPage">
         <Member />
-      </section> */}
+      </section>
       <section id="galleryPage">
         <Gallery />
       </section>

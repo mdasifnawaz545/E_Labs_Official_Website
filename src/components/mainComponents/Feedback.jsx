@@ -35,16 +35,14 @@ function Feedback() {
   }, [feedbacks.length]);
 
   return (
-
-    <div className='flex flex-col items-center justify-around dark:bg-[radial-gradient(circle_at_center,#fff_1%,#ffedde_20%,#ffd4b3_50%)]  py-20 p-4 xl:pl-16'>
-      <h1 className='sm:text-5xl text-4xl font-black text-textColor1 mb-8 text-center'>
-
+    <div className="flex flex-col items-center justify-around dark:bg-[radial-gradient(circle_at_center,#fff_1%,#ffedde_20%,#ffd4b3_50%)] py-20 p-4 xl:pl-16 w-full">
+      <h1 className="sm:text-5xl text-4xl font-black text-textColor1 mb-8 text-center">
         Feedback from our Students
       </h1>
 
-      <div className="w-[80%] max-w-6xl overflow-hidden my-10">
+      <div className="flex w-[100%] mx-20 overflow-hidden my-10">
         <div
-          className="flex transition-transform duration-700 ease-in-out"
+          className="flex transition-transform duration-700 ease-in-out w-full"
           style={{
             transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
           }}
